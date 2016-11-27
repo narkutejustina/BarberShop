@@ -6,28 +6,35 @@
         <meta charset="utf-8">
         <title>BarberShop</title>
 
-        <link href="static/css/bootstrap.css" rel="stylesheet">
+        <link href="resources/css/bootstrap.css" rel="stylesheet">
+        <link href="resources/css/barber.css" rel="stylesheet">
 
         <script href="static/js/bootstrap.js"></script>
         <script href="static/js/npm.js"></script>
     </head>
     <body>
+    <div id = "wrapper">
+        <img src="resources/images/background.jpg" id="background" alt="">
         <div role="navigation">
-            <nav class="navbar navbar-inverse">
+            <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#">BarberShop</a>
+                        <a href="/home"
+                           class="pull-left"><img src="resources/images/logo.png" id="logo" alt="BarberShop"></a>
                     </div>
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Page 1</a></li>
-                        <li><a href="#">Page 2</a></li>
-                        <li><a href="#">Page 3</a></li>
+                        <li class="active"><a href="/home">
+                            <span class="glyphicon glyphicon-home"></span>
+                        </a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Prices</a></li>
+                        <li><a href="#">Staff</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="/booking">Online Booking</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
-
+    </div>
     </body>
-
 </html>
