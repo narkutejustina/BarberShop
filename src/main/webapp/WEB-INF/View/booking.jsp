@@ -4,7 +4,7 @@
     <title>BarberShop Booking Form</title>
 </head>
 <body>
-TODO: Booking Form <br>
+TODO: Booking Form for Clients <br>
 <a href="/clients">Return clients in JSON</a> <br>
 </body>
 </html>
