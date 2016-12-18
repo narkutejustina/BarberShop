@@ -18,7 +18,6 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'war'
 apply plugin: 'docker'
 
-
 war {
     baseName = 'barbershop'
     version = '0.0.1-SNAPSHOT'
