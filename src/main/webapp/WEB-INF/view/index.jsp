@@ -4,7 +4,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>BarberShop</title>
+        <title>Barbershop</title>
 
         <link href="resources/css/bootstrap.css" rel="stylesheet">
         <link href="resources/css/barber.css" rel="stylesheet">
@@ -20,7 +20,7 @@
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <a href="/home"
-                           class="pull-left"><img src="resources/images/logo.png" id="logo" alt="BarberShop"></a>
+                           class="pull-left"><img src="resources/images/logo.png" id="logo" alt="barbershop"></a>
                     </div>
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="/home">

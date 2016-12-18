@@ -1,4 +1,4 @@
-package BarberShop;
+package barbershop;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,6 +1,6 @@
-package BarberShop.Dao;
+package barbershop.dao;
 
-import BarberShop.Entity.Client;
+import barbershop.entity.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

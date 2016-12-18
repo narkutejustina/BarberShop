@@ -1,4 +1,4 @@
-package BarberShop.Entity;
+package barbershop.entity;
 
 public class Client
 {
@@ -8,6 +8,8 @@ public class Client
     private String email;
     private String mobileNumber;
 
+    public Client(){}
+
     public Client(int id, String firstName, String lastName, String email, String mobileNumber)
     {
         this.id = id;
@@ -16,8 +18,6 @@ public class Client
         this.email = email;
         this.mobileNumber = mobileNumber;
     }
-
-    public Client(){}
 
     public int getId()
     {

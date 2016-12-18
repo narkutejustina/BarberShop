@@ -1,7 +1,7 @@
-package BarberShop.Service;
+package barbershop.service;
 
-import BarberShop.Dao.ClientDao;
-import BarberShop.Entity.Client;
+import barbershop.dao.ClientDao;
+import barbershop.entity.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
