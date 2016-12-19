@@ -40,7 +40,7 @@ dependencies {
 
 task buildDocker(type: Docker, dependsOn: build) {
     push = false
-    applicationName = "unibz/${war.baseName}"
+    applicationName = "grietine/barbershop"
     dockerfile = file('src/main/docker/Dockerfile')
     doFirst {
         copy {
