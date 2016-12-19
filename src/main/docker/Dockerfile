@@ -1,6 +1,7 @@
-FROM java:8
+FROM frolvlad/alpine-oraclejdk8:slim
 EXPOSE 8080
 VOLUME /tmp
 ADD barbershop-0.0.1-SNAPSHOT.war app.war
-RUN bash -c 'touch /app.war'
-ENTRYPOINT ["java","-jar","/app.war"]
+RUN sh -c 'touch /app.war'
+ENV JAVA_OPTS=""
+ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.war" ]
