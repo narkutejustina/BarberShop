@@ -11,4 +11,10 @@ public class HomeController
     {
         return "index";
     }
+
+    @RequestMapping("/prices")
+    public String prices()
+    {
+        return "prices";
+    }
 }

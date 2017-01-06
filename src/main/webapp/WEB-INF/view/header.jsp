@@ -11,7 +11,7 @@
                         <span class="glyphicon glyphicon-home"></span>
                     </a></li>
                     <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Prices</a></li>
+                    <li><a href="prices">Prices</a></li>
                     <li><a href="staff">Staff</a></li>
                     <li><a href="#">Contacts</a></li>
                     <li><a href="/booking">Online Booking</a></li>

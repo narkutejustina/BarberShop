@@ -56,7 +56,7 @@
         <table class="table table-striped" style="width:50%">
             <thead>
             <tr>
-                <th align="right">Weekday</th>
+                <th>Weekday</th>
                 <th>Working</th>
             </tr>
             </thead>
@@ -71,13 +71,6 @@
             </tbody>
         </table>
     </div>
-
-
-
-
-
-
-
 
 </body>
 </html>
