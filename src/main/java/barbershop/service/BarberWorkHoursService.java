@@ -29,4 +29,13 @@ public class BarberWorkHoursService {
         }
         return barberWorkHours;
     }
+
+    public List<BarberWorkHours> findByBarberId(int barberId) {
+        List<BarberWorkHours> barberWorkHours = new ArrayList<>();
+        for(BarberWorkHours barberWork: dao.findByBarberIdOrderByStart(barberId)) {
+            barberWorkHours.add(barberWork);
+        }
+        return barberWorkHours;
+    }
+
 }

@@ -5,19 +5,23 @@ import javax.persistence.Table;
 import java.sql.Time;
 import javax.persistence.Id;
 import java.text.SimpleDateFormat;
+import javax.persistence.IdClass;
+import barbershop.entity.WorkHoursPrimaryKey;
 
 /**
  * Created by Justinas on 2017-01-06.
  */
 @Entity(name = "BarberWorkHours")
 @Table(name = "BarberWorkHours")
+@IdClass(WorkHoursPrimaryKey.class)
 public class BarberWorkHours {
 
     @Id
     private int barberId;
     private Time start;
     private  Time end;
-    String dayOfWeek;
+    @Id
+    private String dayOfWeek;
 
     public BarberWorkHours() {
     }

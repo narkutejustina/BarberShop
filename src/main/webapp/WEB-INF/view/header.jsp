@@ -1,5 +1,4 @@
 <div id = "wrapper">
-    <img src="resources/images/background.jpg" id="background" alt="">
     <div role="navigation">
         <nav class="navbar navbar-default">
             <div class="container-fluid">
