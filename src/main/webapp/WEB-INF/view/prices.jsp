@@ -31,7 +31,7 @@
             </tr>
             <tr>
                 <td> Hairstyle </td>
-                <td> 18 Eur </td>
+                <td> 19 Eur </td>
             </tr>
         </tbody>
     </table>
