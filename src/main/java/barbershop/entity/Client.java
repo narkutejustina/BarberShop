@@ -1,5 +1,8 @@
 package barbershop.entity;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Client
 {
     private int id;
@@ -7,6 +10,7 @@ public class Client
     private String lastName;
     private String email;
     private String mobileNumber;
+
 
     public Client(){}
 
