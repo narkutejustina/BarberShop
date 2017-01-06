@@ -1,7 +1,9 @@
 package barbershop.controller;
 
 import barbershop.entity.Barber;
+import barbershop.entity.BarberWorkHours;
 import barbershop.service.BarberService;
+import barbershop.service.BarberWorkHoursService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,21 +21,19 @@ public class StaffController {
     @Autowired
     private BarberService barberService;
 
+    @Autowired
+    private BarberWorkHoursService barberWorkHoursService;
+
     @GetMapping("/staff")
     public String staff(Model model, HttpServletRequest request) {
 
         //barberService.save(new Barber("name","lastname", "123", "email@wmil.com"));
 
         List<Barber> barberList = barberService.findAll();
-        System.out.println(barberList.size());
+        List<BarberWorkHours> barberWorkHoursList = barberWorkHoursService.findAll();
 
-        /*
-        for(Barber barber : barberList ) {
-            System.out.println(barber.getFirstName());
-            System.out.println(barber.getLastName());
-        }
-        */
         request.setAttribute("barbers", barberList);
+        request.setAttribute("workHours", barberWorkHoursList);
 
         return "staff";
     }

@@ -27,7 +27,6 @@ public class BarberService {
         List<Barber> barbers = new ArrayList<>();
         for(Barber barber: dao.findAll()) {
             barbers.add(barber);
-            System.out.println(barber.getFirstName());
         }
         return barbers;
     }

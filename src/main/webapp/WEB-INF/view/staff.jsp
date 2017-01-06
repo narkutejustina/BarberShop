@@ -25,6 +25,14 @@
     </c:forEach>
 </div>
 
+    <c:forEach var="workHour" items="${workHours}">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default">${workHour.start} ${workHour.end}</button>
+            <button type="button" class="btn btn-default">${workHour.dayOfWeek}</button>
+        </div>
+    </c:forEach>
+
+
 
 
 </body>
