@@ -2,7 +2,6 @@ package barbershop.entity;
 
 import javax.persistence.Entity;
 
-@Entity
 public class Client
 {
     private int id;
