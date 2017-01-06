@@ -1,24 +1,31 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Justinas
-  Date: 2017-01-06
-  Time: 12:03
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE HTML>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <html>
 <head>
-    <title>Title</title>
+    <meta charset="utf-8">
+    <link href="resources/css/bootstrap.css" rel="stylesheet">
+    <link href="resources/css/barber.css" rel="stylesheet">
+
+    <script href="static/js/bootstrap.js"></script>
+    <script href="static/js/npm.js"></script>
+
+    <title>Staff</title>
 </head>
 <body>
 
-<c:forEach var="barber" items="${barbers}">
-    ${barber.firstName}
-    ${barber.lastName}
-    ${barber.phone}
-</c:forEach>
+<%@include file="header.jsp" %>
+
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+    <c:forEach var="barber" items="${barbers}">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default">${barber.firstName} ${barber.lastName}</button>
+        </div>
+    </c:forEach>
+</div>
+
+
 
 </body>
 </html>

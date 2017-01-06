@@ -1,9 +1,19 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE HTML>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+
 <html lang="en">
 <head>
-    <title>Barbershop Booking Form</title>
+    <meta charset="utf-8">
+    <title>Booking</title>
+
+    <link href="resources/css/bootstrap.css" rel="stylesheet">
+    <link href="resources/css/barber.css" rel="stylesheet">
+
+    <script href="static/js/bootstrap.js"></script>
+    <script href="static/js/npm.js"></script>
 </head>
 <body>
+<%@include file="header.jsp" %>
 TODO: Booking Form for Clients <br>
 <a href="/clients">Return clients in JSON</a> <br>
 </body>

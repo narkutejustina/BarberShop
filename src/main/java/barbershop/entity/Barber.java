@@ -13,7 +13,7 @@ public class Barber
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private int id;
+    private int barberId;
     private String firstName;
     private String lastName;
     private String phone;
@@ -35,12 +35,17 @@ public class Barber
         this.email = email;
     }
 
-    public int getId() {
-        return id;
+    public Barber(String firstName, String lastName, String phone, String email, String id){
+        this(firstName, lastName, phone);
+        this.email = email;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getBarberId() {
+        return barberId;
+    }
+
+    public void setBarberId(int id) {
+        this.barberId = id;
     }
 
     public String getFirstName() {

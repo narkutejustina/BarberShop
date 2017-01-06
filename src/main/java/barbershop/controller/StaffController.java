@@ -26,6 +26,13 @@ public class StaffController {
 
         List<Barber> barberList = barberService.findAll();
         System.out.println(barberList.size());
+
+        /*
+        for(Barber barber : barberList ) {
+            System.out.println(barber.getFirstName());
+            System.out.println(barber.getLastName());
+        }
+        */
         request.setAttribute("barbers", barberList);
 
         return "staff";
