@@ -14,7 +14,7 @@
                     <li><a href="prices">Prices</a></li>
                     <li><a href="staff">Staff</a></li>
                     <li><a href="#">Contacts</a></li>
-                    <li><a href="/booking">Online Booking</a></li>
+                    <li><a href="booking">Online Booking</a></li>
                 </ul>
             </div>
         </nav>

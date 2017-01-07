@@ -8,6 +8,7 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import barbershop.entity.Barber;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 /**

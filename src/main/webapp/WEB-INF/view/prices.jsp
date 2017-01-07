@@ -8,8 +8,6 @@
     <link href="resources/css/bootstrap.css" rel="stylesheet">
     <link href="resources/css/barber.css" rel="stylesheet">
 
-    <script href="static/js/bootstrap.js"></script>
-    <script href="static/js/npm.js"></script>
 
     <title>Prices</title>
 </head>
