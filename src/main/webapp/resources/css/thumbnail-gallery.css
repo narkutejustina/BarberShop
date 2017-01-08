@@ -7,9 +7,11 @@
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
    
-    background-image: url("/resources/images/backgroundBlur.jpg");
-    background-repeat:no-repeat;
-    background-position:center;  
+    background: url("/resources/images/backgroundBlur.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
 .thumb {
