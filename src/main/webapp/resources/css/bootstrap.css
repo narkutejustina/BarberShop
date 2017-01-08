@@ -1123,6 +1123,9 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 200px;
+    height: 150px;
+    overflow: hidden;
 }
 .img-rounded {
   border-radius: 6px;
@@ -5009,6 +5012,7 @@ a.badge:focus {
   -webkit-transition: border .2s ease-in-out;
        -o-transition: border .2s ease-in-out;
           transition: border .2s ease-in-out;
+ 
 }
 .thumbnail > img,
 .thumbnail a > img {
