@@ -8,7 +8,7 @@
 
     <title>Barbershop</title>
 
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/bootstrap.css" rel="stylesheet">
     <link href="resources/css/creative.css" rel="stylesheet">
     <link href="resources/css/full-slider.css" rel="stylesheet">
 
