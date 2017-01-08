@@ -5004,7 +5004,7 @@ a.badge:focus {
   margin-bottom: 20px;
   line-height: 1.42857143;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 3px solid #ddd;
   border-radius: 4px;
   -webkit-transition: border .2s ease-in-out;
        -o-transition: border .2s ease-in-out;
@@ -5018,7 +5018,7 @@ a.badge:focus {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #337ab7;
+  border-color: #8B4513;
 }
 .thumbnail .caption {
   padding: 9px;

@@ -21,7 +21,7 @@
     <link href="resources/css/creative.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/thumbnail-gallery.css" rel="stylesheet">
+    <link href="resources/css/thumbnail-gallery.css" rel="stylesheet" >
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,9 +29,10 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
     </head>
     <body >
- 
+      
         <!-- Navigation -->
         <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
        
@@ -58,15 +59,15 @@
             </div>
             <!-- /.container-fluid -->
         </nav>
-        <div class="item active">
+        <div class="item active" >
         
         </div>
-        <div class="container">
+        <div class="container" >
 
         <div class="row">
        
             <div class="col-lg-12">
-                <h1 class="page-header">Thumbnail Gallery</h1>
+                <h1 class="page-header galleryHeader" >Gallery</h1>
             </div>
 
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">

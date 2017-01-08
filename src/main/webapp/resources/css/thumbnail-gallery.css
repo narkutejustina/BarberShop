@@ -6,6 +6,10 @@
 
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+   
+    background-image: url("/resources/images/backgroundBlur.jpg");
+    background-repeat:no-repeat;
+    background-position:center;  
 }
 
 .thumb {
@@ -14,4 +18,24 @@ body {
 
 footer {
     margin: 50px 0;
+}
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+.galleryHeader{
+    color: white;
 }
