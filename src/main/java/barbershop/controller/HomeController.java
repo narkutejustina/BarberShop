@@ -17,4 +17,9 @@ public class HomeController
     {
         return "prices";
     }
+    @RequestMapping("/gallery")
+    public String gallery()
+    {
+        return "gallery";
+    }
 }
