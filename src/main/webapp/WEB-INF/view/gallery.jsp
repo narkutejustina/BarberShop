@@ -62,134 +62,62 @@
             <!-- /.container-fluid -->
         </nav>
        
-       
         <div class="container" >
-        <div id="freewall" class="free-wall">
-        <div class="row">
+            <div class="row">
        
-            <div class="col-lg-12">
-                <h1 class="page-header galleryHeader" >Gallery</h1>
+            <div class="col-md-4">
+              <img src="resources/images/gallery/beard1.jpg" class="img-responsive">
             </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive " src="/resources/images/gallery/beard1.jpg" alt="">
-                </a>
+                <div class="col-md-4">
+               <img src="resources/images/gallery/beard2.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="/resources/images/gallery/beard2.jpg" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard4.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="/resources/images/gallery/beard3.jpg" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard5.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="/resources/images/gallery/beard4.jpg" alt="">
-                </a>
+                <div class="col-md-4">
+               <img src="resources/images/gallery/beard6.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="/resources/images/gallery/beard5.jpg" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard7.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="/resources/images/gallery/beard6.jpg" alt="">
-                </a>
+            <div class="col-md-4">
+              <img src="resources/images/gallery/beard9.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="/resources/images/gallery/beard7.jpg" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard8.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="/resources/images/gallery/beard8.jpg" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard13.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="/resources/images/gallery/beard9.jpg" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard10.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="/resources/images/gallery/beard10.jpg" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard11.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="/resources/images/gallery/beard11.jpg" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard12.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard14.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard16.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard18.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard17.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard19.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard15.jpg" class="img-responsive">
             </div>
         </div>
 
@@ -203,11 +131,8 @@
                 </div>
             </div>
         </footer>
-
-    </div>
         </div>
-        
-    <!-- /.container -->
+<!-- /.container -->
 
     <!-- jQuery -->
     <script src="resources/js/jquery.js"></script>
@@ -215,25 +140,6 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="resources/js/bootstrap.min.js"></script>
     <script src="resources/js/creative.min.js"></script>
-    <script src="resources/js/freewall.js"></script>
-    <script type="text/javascript">
-			var wall = new Freewall("#freewall");
-			wall.reset({
-				selector: '.brick',
-				animate: true,
-				cellW: 200,
-				cellH: 'auto',
-				onResize: function() {
-					wall.fitWidth();
-				}
-			});
 
-			wall.container.find('.brick img').load(function() {
-				wall.fitWidth();
-			});
-
-
-		</script>
-        
     </body>
 </html>
