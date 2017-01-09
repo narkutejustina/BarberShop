@@ -68,7 +68,6 @@ public class StaffController {
         request.setAttribute("barberInfo", barberList.get(index));
 
         return "staff";
-
     }
 
 }

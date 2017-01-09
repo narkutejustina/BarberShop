@@ -1122,9 +1122,7 @@ img {
 .carousel-inner > .item > a > img {
   display: block;
   max-width: 100%;
-  height: auto;
-  width: 200px;
-    height: 150px;
+    max-height: 100%;
     overflow: hidden;
 }
 .img-rounded {
@@ -5003,10 +5001,10 @@ a.badge:focus {
 }
 .thumbnail {
   display: block;
-  padding: 4px;
+  padding: 1px;
   margin-bottom: 20px;
   line-height: 1.42857143;
-  background-color: #fff;
+  background-color: none;
   border: 3px solid #ddd;
   border-radius: 4px;
   -webkit-transition: border .2s ease-in-out;
@@ -5021,7 +5019,8 @@ a.badge:focus {
 }
 a.thumbnail:hover,
 a.thumbnail:focus,
-a.thumbnail.active {
+a.thumbnail.active,
+img.thumbnail:hover {
   border-color: #8B4513;
 }
 .thumbnail .caption {

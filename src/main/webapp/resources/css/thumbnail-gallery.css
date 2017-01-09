@@ -20,26 +20,25 @@ body {
 footer {
     margin: 50px 0;
 }
-
+#bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
 .galleryHeader{
     color: white;
 }
 
-.row {
- -moz-column-width: 25em;
- -webkit-column-width: 25em;
- -moz-column-gap: 10px;
- -webkit-column-gap:10px; 
-}
-
-.row > .col-md-4 {
- display: inline-block;
- padding: 0;
- margin: 10px;
- width:  100%; 
- float:none;
-}
-
-.img-responsive {
-  border:0px solid #999;
-}
+.grid-item { width: 270px; }
