@@ -38,7 +38,7 @@
             <div class="well well-sm">
                 <form class="form-horizontal" method="post">
                     <fieldset>
-                        <legend class="text-center contactHeader">Contact us</legend>
+                        <legend class="text-center contactHeader">CONTACT US</legend>
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-1">
                                 <input id="fname" name="name" type="text" placeholder="First Name" class="form-control">
@@ -69,7 +69,7 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-12 text-center">
+                            <div class="col-md-12 text-center ">
                                 <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                             </div>
                         </div>
@@ -79,8 +79,8 @@
         </div>
         <div class="col-md-6">
             <div>
-                <div class="panel panel-default well">
-                    <div class="text-center contactHeader">Our Office</div>
+                <div class="panel panel-default well well-sm">
+                    <div class="text-center contactHeader">OUR OFFICE</div>
                     <div class="panel-body text-center">
                         <h4>Address</h4>
                         <div>
