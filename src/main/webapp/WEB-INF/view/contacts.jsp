@@ -23,6 +23,7 @@
     </head>
     <body>
         <%@include file="header.jsp" %>
+        
         <!-- Contact with Map - START -->
 <div class="container">
     <div class="row">
@@ -62,13 +63,14 @@
 
                         <div class="form-group">
                             <div class="col-md-12 text-center ">
-                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                <button type="submit" class="btn btn-primary btn-xl">Submit</button>
                             </div>
                         </div>
                     </fieldset>
                 </form>
             </div>
         </div>
+        
         <div class="col-md-6">
             <div>
                 <div class="panel panel-default well well-sm">
