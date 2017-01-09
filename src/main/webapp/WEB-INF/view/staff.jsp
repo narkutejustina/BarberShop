@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <link href="resources/css/bootstrap.css" rel="stylesheet">
     <link href="resources/css/creative.css" rel="stylesheet">
-    <link href="resources/css/full-slider.css" rel="stylesheet">
+
     <link href="resources/css/font-awesome.min.css" rel="stylesheet">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'

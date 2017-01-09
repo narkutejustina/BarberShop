@@ -6,3 +6,12 @@ body {
     background-size: cover;
     -o-background-size: cover;
 }
+
+.whiteHeader{
+    color: white;
+}
+
+.price{
+    width: 200px;
+    height: 100px;
+}
