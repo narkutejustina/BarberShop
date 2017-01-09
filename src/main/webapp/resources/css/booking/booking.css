@@ -1,0 +1,44 @@
+@import url('../bootstrap.css');
+@import url('../creative.css');
+@import url('style6.css');
+
+.brand{
+    font-family: 'Great Vibes', cursive !important;
+    text-transform: none !important;
+    font-weight: lighter;
+    font-size: 30px;
+}
+.main{
+    padding: 80px 20px 50px 20px;
+}
+.intro-header {
+    margin: 50px 0px 50px 0px;
+    text-align: center;
+    color: #f8f8f8;
+
+}
+body{
+    background: url(../../images/backgroundBlur.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: auto;
+}
+
+.booking-input{
+    width: 200px;
+    color: #999;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.booking-input:hover, .cd-dropdown:hover{
+    border-color: #e66b20;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #e66b20;
+    outline: 0 none;
+}
+
+.booking-label{
+    font-family: 'Great Vibes', cursive;
+    font-size: 20px;
+    text-align: right;
+    font-weight: lighter;
+}

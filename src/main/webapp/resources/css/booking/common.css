@@ -1,0 +1,89 @@
+.cd-dropdown,
+.cd-select {
+	position: relative;
+	width: 200px;
+	display: inline-block;
+	/*margin: 10px auto;*/
+	/*border-color: grey;*/
+}
+
+.cd-dropdown > span {
+	width: 200px;
+	height: 25px;
+	line-height: 25px;
+	color: #999;
+	font-weight: lighter;
+	font-size: 12px;
+	background: #fff;
+	display: block;
+	/*padding: 0 50px 0 30px;*/
+	position: relative;
+	cursor: pointer;
+}
+
+.cd-dropdown > span:after {
+	content: '\25BC';
+	position: absolute;
+	/*right: 0px;*/
+	/*top: 15%;*/
+	width: 30px;
+	text-align: center;
+	font-size: 10px;
+	/*padding: 10px;*/
+	/*height: 70%;*/
+	line-height: 25px;
+	border-left: 1px solid #ddd;
+}
+
+.cd-dropdown.cd-active > span:after {
+	content: '\25B2';
+}
+
+.cd-dropdown ul {
+	list-style-type: none;
+	/*margin: 0;*/
+	/*padding: 0;*/
+	/*display: block;*/
+	position: relative;
+}
+
+.cd-dropdown ul li {
+	display: block;
+}
+
+.cd-dropdown ul li span {
+	width: 100%;
+	background: #fff;
+	line-height: 25px;
+	font-size: 12px;
+	display: block;
+	color: #bcbcbc;
+	cursor: pointer;
+	font-weight: lighter;
+}
+
+.cd-dropdown > span,
+.cd-dropdown ul li span {
+	font-size: 12px;
+	display: block;
+	color: #bcbcbc;
+	font-weight: lighter;
+
+	-webkit-backface-visibility: hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.cd-dropdown > span span[class^="icon-"],
+.cd-dropdown > span span[class*=" icon-"]{
+	/*padding: 0 30px 0 45px;*/
+}
+
+/* Select fallback styling */
+.cd-select {
+	border: 1px solid #ddd;
+}
