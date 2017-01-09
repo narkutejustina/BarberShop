@@ -100,7 +100,7 @@
 </div>
 
 <script src="resources/js/jquery.js"></script>
-<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyD_-3t2Bfyk-i-DRHy-83zSDnzThJQoWMg"></script>
 
 <script type="text/javascript">
     jQuery(function ($) {
