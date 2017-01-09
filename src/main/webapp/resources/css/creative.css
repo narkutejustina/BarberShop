@@ -435,3 +435,10 @@ body {
     color: brown;
     
 }
+
+.brand{
+  font-family: 'Great Vibes', cursive !important;
+  text-transform: none !important;
+  font-weight: lighter;
+  font-size: 30px;
+}
