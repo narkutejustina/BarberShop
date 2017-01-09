@@ -65,7 +65,7 @@
             </div>
         </div>
         <div class="item">
-            <div class="fill" style="background-image:url('resources/images/background5.jpeg');"></div>
+            <div class="fill" style="background-image:url('resources/images/background5.jpg');"></div>
             <div class="carousel-caption">
             </div>
         </div>
