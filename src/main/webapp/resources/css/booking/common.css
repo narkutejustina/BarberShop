@@ -3,8 +3,6 @@
 	position: relative;
 	width: 200px;
 	display: inline-block;
-	/*margin: 10px auto;*/
-	/*border-color: grey;*/
 }
 
 .cd-dropdown > span {
@@ -16,7 +14,6 @@
 	font-size: 12px;
 	background: #fff;
 	display: block;
-	/*padding: 0 50px 0 30px;*/
 	position: relative;
 	cursor: pointer;
 }
@@ -24,13 +21,9 @@
 .cd-dropdown > span:after {
 	content: '\25BC';
 	position: absolute;
-	/*right: 0px;*/
-	/*top: 15%;*/
-	width: 30px;
+	width: 20px;
 	text-align: center;
 	font-size: 10px;
-	/*padding: 10px;*/
-	/*height: 70%;*/
 	line-height: 25px;
 	border-left: 1px solid #ddd;
 }
@@ -41,9 +34,6 @@
 
 .cd-dropdown ul {
 	list-style-type: none;
-	/*margin: 0;*/
-	/*padding: 0;*/
-	/*display: block;*/
 	position: relative;
 }
 
