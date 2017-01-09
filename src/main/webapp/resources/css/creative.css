@@ -155,7 +155,6 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('../img/header.jpg');
   text-align: center;
   color: white;
 }
@@ -428,4 +427,10 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #222222;
+}
+
+.contactHeader{
+    color: white;
+    font
+    
 }
