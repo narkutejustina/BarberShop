@@ -93,6 +93,7 @@
 </div>
 
 <script src="resources/js/jquery.js"></script>
+
 <script src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyD_-3t2Bfyk-i-DRHy-83zSDnzThJQoWMg"></script>
 
 <script type="text/javascript">
@@ -131,5 +132,7 @@
         padding: 10px;
     }
 </style>
+        <script src="resources/js/bootstrap.min.js"></script>
+        <script src="resources/js/creative.min.js"></script>
     </body>
 </html>

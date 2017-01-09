@@ -57,7 +57,6 @@
     </h4>
     </div>
 
-
     <div class="container" align="center">
         <h2>Working hours</h2>
         <table class="table table-striped" style="width:50%">
