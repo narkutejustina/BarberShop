@@ -6,12 +6,13 @@
     <meta charset="utf-8">
     <title>Booking</title>
 
+    <link href="resources/css/background.css" rel="stylesheet">
+
     <link href="resources/css/booking/booking.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
 
-
     <script src="resources/js/booking/modernizr.custom.63321.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="resources/js/jquery.js"></script>
     <script type="text/javascript" src="resources/js/booking/jquery.dropdown.js"></script>
     <script type="text/javascript">
 
@@ -30,7 +31,8 @@
 
 </head>
 <body>
-<%@include file="navbar.jsp" %>
+
+<%@include file="header.jsp" %>
 
 <div class="intro-header ">
     <section class="main">
@@ -75,5 +77,7 @@
         </form>
     </section>
 </div>
+
+    <script src="resources/js/creative.min.js"></script>
 </body>
 </html>

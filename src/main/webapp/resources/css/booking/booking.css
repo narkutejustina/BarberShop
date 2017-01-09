@@ -17,12 +17,6 @@
     color: #f8f8f8;
 
 }
-body{
-    background: url(../../images/backgroundBlur.jpg) no-repeat center center fixed;
-    background-size: cover;
-    height: auto;
-}
-
 .booking-input{
     width: 200px;
     color: #999;
