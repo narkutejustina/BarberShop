@@ -32,11 +32,11 @@ public class Task {
         this.title = title;
     }
 
-    public int getPhone() {
+    public int getDuration() {
         return duration;
     }
 
-    public void setPhone(int duration) {
+    public void setDuration(int duration) {
         this.duration = duration;
     }
 
