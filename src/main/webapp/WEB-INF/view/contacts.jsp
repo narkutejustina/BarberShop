@@ -3,6 +3,7 @@
     Created on : Jan 9, 2017, 12:21:51 PM
     Author     : Urte
 --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
