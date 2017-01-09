@@ -79,13 +79,12 @@
         </div>
         <div class="col-md-6">
             <div>
-                <div class="panel panel-default">
+                <div class="panel panel-default well">
                     <div class="text-center contactHeader">Our Office</div>
                     <div class="panel-body text-center">
                         <h4>Address</h4>
                         <div>
-                        Gedimino pr.54, <br />
-                        Vilnius<br />
+                        Gedimino pr.54, Vilnius<br />
                         370 5 707 0707<br />
                         barbershop@unibz.it<br />
                         </div>
