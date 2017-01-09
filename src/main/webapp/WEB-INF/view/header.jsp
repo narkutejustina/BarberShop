@@ -1,22 +1,28 @@
 <div id = "wrapper">
     <div role="navigation">
-        <nav class="navbar navbar-default">
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <a href="/home"
-                       class="pull-left"><img src="resources/images/logo.png" id="logo" alt="barbershop"></a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="home">Barbershop</a>
                 </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/home">
-                        <span class="glyphicon glyphicon-home"></span>
-                    </a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="prices">Prices</a></li>
-                    <li><a href="staff">Staff</a></li>
-                    <li><a href="#">Contacts</a></li>
-                    <li><a href="booking">Online Booking</a></li>
-                </ul>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="gallery">Gallery</a></li>
+                        <li><a href="prices">Prices</a></li>
+                        <li><a href="staff">Staff</a></li>
+                        <li><a href="contacts">Contacts</a></li>
+                        <li><a href="booking">Online Booking</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
             </div>
+            <!-- /.container-fluid -->
         </nav>
     </div>
 </div>
