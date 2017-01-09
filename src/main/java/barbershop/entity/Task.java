@@ -11,7 +11,7 @@ public class Task {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int taskId;
     private String title;
-    private int phone;
+    private int duration;
     private int price;
 
     public Task() {}
@@ -33,11 +33,11 @@ public class Task {
     }
 
     public int getPhone() {
-        return phone;
+        return duration;
     }
 
-    public void setPhone(int phone) {
-        this.phone = phone;
+    public void setPhone(int duration) {
+        this.duration = duration;
     }
 
     public int getPrice() {
