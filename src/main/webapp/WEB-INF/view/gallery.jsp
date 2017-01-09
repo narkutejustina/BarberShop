@@ -19,9 +19,11 @@
     <!-- Bootstrap Core CSS -->
     <link href="resources/css/bootstrap.css" rel="stylesheet">
     <link href="resources/css/creative.css" rel="stylesheet">
-
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <!-- Custom CSS -->
-    <link href="css/thumbnail-gallery.css" rel="stylesheet">
+    <link href="resources/css/thumbnail-gallery.css" rel="stylesheet" >
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,9 +31,10 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
     </head>
     <body >
- 
+      
         <!-- Navigation -->
         <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
        
@@ -58,76 +61,63 @@
             </div>
             <!-- /.container-fluid -->
         </nav>
-        <div class="item active">
-        
-        </div>
-        <div class="container">
-
-        <div class="row">
        
-            <div class="col-lg-12">
-                <h1 class="page-header">Thumbnail Gallery</h1>
+        <div class="container" >
+            <div class="row">
+       
+            <div class="col-md-4">
+              <img src="resources/images/gallery/beard1.jpg" class="img-responsive">
             </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+                <div class="col-md-4">
+               <img src="resources/images/gallery/beard2.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard4.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard5.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+                <div class="col-md-4">
+               <img src="resources/images/gallery/beard6.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard7.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+            <div class="col-md-4">
+              <img src="resources/images/gallery/beard9.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard8.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard13.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard10.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard11.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard12.jpg" class="img-responsive">
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard14.jpg" class="img-responsive">
+            </div>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard16.jpg" class="img-responsive">
+            </div>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard18.jpg" class="img-responsive">
+            </div>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard17.jpg" class="img-responsive">
+            </div>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard19.jpg" class="img-responsive">
+            </div>
+            <div class="col-md-4">
+               <img src="resources/images/gallery/beard15.jpg" class="img-responsive">
             </div>
         </div>
 
@@ -141,16 +131,15 @@
                 </div>
             </div>
         </footer>
-
-    </div>
-        
-    <!-- /.container -->
+        </div>
+<!-- /.container -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="resources/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-        
+    <script src="resources/js/bootstrap.min.js"></script>
+    <script src="resources/js/creative.min.js"></script>
+
     </body>
 </html>

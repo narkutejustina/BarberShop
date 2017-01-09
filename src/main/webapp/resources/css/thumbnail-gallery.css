@@ -6,6 +6,11 @@
 
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    background: url("/resources/images/backgroundBlur.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
 .thumb {
@@ -14,4 +19,27 @@ body {
 
 footer {
     margin: 50px 0;
+}
+
+.galleryHeader{
+    color: white;
+}
+
+.row {
+ -moz-column-width: 25em;
+ -webkit-column-width: 25em;
+ -moz-column-gap: 10px;
+ -webkit-column-gap:10px; 
+}
+
+.row > .col-md-4 {
+ display: inline-block;
+ padding: 0;
+ margin: 10px;
+ width:  100%; 
+ float:none;
+}
+
+.img-responsive {
+  border:0px solid #999;
 }
