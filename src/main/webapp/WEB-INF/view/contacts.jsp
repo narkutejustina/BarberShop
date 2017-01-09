@@ -80,7 +80,7 @@
         <div class="col-md-6">
             <div>
                 <div class="panel panel-default">
-                    <div class="text-center header">Our Office</div>
+                    <div class="text-center contactHeader">Our Office</div>
                     <div class="panel-body text-center">
                         <h4>Address</h4>
                         <div>
