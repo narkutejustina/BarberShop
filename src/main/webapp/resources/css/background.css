@@ -1,0 +1,17 @@
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    background: url("/resources/images/backgroundBlur.jpg") no-repeat center center fixed ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.whiteHeader{
+    color: white;
+}
+
+.price{
+    width: 200px;
+    height: 100px;
+}

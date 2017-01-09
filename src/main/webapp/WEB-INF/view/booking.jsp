@@ -6,12 +6,12 @@
     <meta charset="utf-8">
     <title>Booking</title>
 
-    <link href="resources/css/booking/booking.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link href="resources/css/background.css" rel="stylesheet">
 
+    <link href="resources/css/booking/booking.css" rel="stylesheet">
 
     <script src="resources/js/booking/modernizr.custom.63321.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="resources/js/jquery.js"></script>
     <script type="text/javascript" src="resources/js/booking/jquery.dropdown.js"></script>
     <script type="text/javascript">
 
@@ -30,37 +30,38 @@
 
 </head>
 <body>
-<%@include file="navbar.jsp" %>
+
+<%@include file="header.jsp" %>
 
 <div class="intro-header ">
     <section class="main">
         <form class="form-horizontal">
             <div class="form-group">
-                <label class="booking-label col-sm-offset-3 col-sm-2" >First Name:</label>
+                <label class="col-sm-offset-3 col-sm-2" >First Name:</label>
                 <div class="col-sm-3">
-                    <input id="firstname" class=" booking-input">
+                    <input id="firstname" class="booking-input">
                 </div>
             </div>
             <div class="form-group">
-                <label class="booking-label col-sm-offset-3 col-sm-2" >Last Name:</label>
+                <label class="col-sm-offset-3 col-sm-2" >Last Name:</label>
                 <div class="col-sm-3">
-                    <input id="lastname" class=" booking-input">
+                    <input id="lastname" class="booking-input">
                 </div>
             </div>
             <div class="form-group">
-                <label class="booking-label col-sm-offset-3 col-sm-2" >Phone:</label>
+                <label class="col-sm-offset-3 col-sm-2" >Phone:</label>
                 <div class="col-sm-3">
-                    <input id="phone" class=" booking-input">
+                    <input id="phone" class="booking-input">
                 </div>
             </div>
             <div class="form-group">
-                <label class="booking-label col-sm-offset-3 col-sm-2" >Email:</label>
+                <label class="col-sm-offset-3 col-sm-2" >Email:</label>
                 <div class="col-sm-3">
-                    <input id="email" class=" booking-input">
+                    <input id="email" class="booking-input">
                 </div>
             </div>
             <div class="form-group">
-                <label class="booking-label col-sm-offset-3 col-sm-2" >Services:</label>
+                <label class="col-sm-offset-3 col-sm-2" >Services:</label>
                 <div class="col-sm-3">
                     <select id="cd-dropdown" class="cd-select  col-sm-10">
                         <option value="-1" selected>Choose your service</option>
@@ -75,5 +76,7 @@
         </form>
     </section>
 </div>
+
+    <script src="resources/js/creative.min.js"></script>
 </body>
 </html>
