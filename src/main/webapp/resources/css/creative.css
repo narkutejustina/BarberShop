@@ -431,6 +431,8 @@ body {
 
 .contactHeader{
     color: white;
-    font
+    font-weight: bold;
+    font-size: 2.5em;
+    color: brown;
     
 }
