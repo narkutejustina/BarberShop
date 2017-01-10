@@ -13,6 +13,8 @@
     <link href="resources/css/bootstrap.css" rel="stylesheet">
     <link href="resources/css/creative.css" rel="stylesheet">
     <link href="resources/css/full-slider.css" rel="stylesheet">
+
+
     <link href="resources/css/font-awesome.min.css" rel="stylesheet">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
@@ -34,57 +36,48 @@
 <%@include file="header.jsp" %>
 
 <!-- Full Page Image Background Carousel Header -->
+
 <header id="myCarousel" class="carousel slide">
+
     <!-- Indicators -->
     <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+    <li data-target="#myCarousel" data-slide-to="4"></li>
     </ol>
+
 
     <!-- Wrapper for Slides -->
     <div class="carousel-inner">
         <div class="item active">
             <div class="fill" style="background-image:url('resources/images/background3.jpg');"></div>
-            <div class="carousel-caption">
-            </div>
         </div>
         <div class="item">
             <div class="fill" style="background-image:url('resources/images/background2.jpg');"></div>
-            <div class="carousel-caption">
-            </div>
         </div>
         <div class="item">
             <div class="fill" style="background-image:url('resources/images/background1.jpg');"></div>
-            <div class="carousel-caption">
-            </div>
         </div>
         <div class="item">
             <div class="fill" style="background-image:url('resources/images/background4.jpg');"></div>
-            <div class="carousel-caption">
-            </div>
         </div>
         <div class="item">
             <div class="fill" style="background-image:url('resources/images/background5.jpg');"></div>
-            <div class="carousel-caption">
-            </div>
         </div>
     </div>
 
-    <div class="header-content">
-        <div class="header-content-inner">
-            <h1 id="homeHeading">Welcome to Barbershop</h1>
-            <hr>
-            <p>
-                The Barbershop offers an experience to remember for those seeking a unique and sophisticated outing
-                in a relaxed atmosphere.</br>
-                You can always be sure our barbers have got you covered for all the classics and latest hairstyles!
-            </p>
-            <a href="booking" class="btn btn-primary btn-xl page-scroll">Make a booking</a>
+        <div class="carousel-caption homeHeading">
+                <h1>Welcome to Barbershop</h1>
+                <hr>
+                <p>
+                    The Barbershop offers an experience to remember for those seeking a unique and sophisticated outing
+                    in a relaxed atmosphere.</br>
+                    You can always be sure our barbers have got you covered for all the classics and latest hairstyles!
+                </p>
+                <a href="booking" class="btn btn-primary btn-xl page-scroll">Make a booking</a>
         </div>
-    </div>
 
     <!-- Controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -119,6 +112,7 @@
     </footer>
 
 </div>
+
 <!-- /.container -->
 
 <script src="resources/js/jquery.js"></script>

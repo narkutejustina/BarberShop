@@ -26,23 +26,25 @@
     <div align="center">
         <form class="form-horizontal" method="POST" action="login" modelAttribute="loginForm">
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="username">Username</label>
+                    <label class="col-md-4 control-label" for="username">Username:</label>
                     <div class="col-md-4">
-                        <input id="username" name="username" type="text" placeholder="username" class="form-control input-md" value="${user.username}" required/>
+                        <input id="username" name="username" type="text" placeholder="Username"
+                               class="form-control input-md" value="${user.username}" required/>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="password">Password</label>
+                    <label class="col-md-4 control-label" for="password">Password:</label>
                     <div class="col-md-4">
-                        <input id="password" name="password" type="password" placeholder="password" class="form-control input-md" value="${user.password}" required/>
+                        <input id="password" name="password" type="password" placeholder="Password"
+                               class="form-control input-md" value="${user.password}" required/>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="submit"></label>
                     <div class="col-md-4">
-                        <button type="submit" id="submit" name="submit" class="btn btn-success">Login</button>
+                        <button type="submit" id="submit" name="submit" class="btn btn-primary btn-xl">Login</button>
                     </div>
                 </div>
         </form>

@@ -24,7 +24,7 @@
     </head>
     <body>
         <%@include file="header.jsp" %>
-        
+
         <!-- Contact with Map - START -->
 <div class="container">
     <div class="row">
