@@ -16,16 +16,14 @@
 <div class="intro-header ">
     <section class="main">
         <h1> Your Booking Information</h1>
-        <h2> ${firstName}</h2>
-        <h2> ${lastName}</h2>
-        <h2> ${phone}</h2>
-        <h2> ${email}</h2><br/>
-        <h2> ${barber}</h2>
-        <h2> ${taskInfo}</h2>
         <br/>
-        <h2> ${date} ${time}</h2>
+        <h3>Appointment:${date} ${time}</h3>
+        <h3> Barber: ${barberName}</h3>
+        <h3> Service Info: ${taskInfo} ${duration}min  ${price} &euro;</h3>
         <br/>
-        <h2> ${duration}min  ${price} &euro;</h2>
+        <h3> Client: ${name} ${lastname}</h3>
+        <h3> Phone: ${phone}</h3>
+        <h3> Email: ${email}</h3>
     </section>
 </div>
 </body>

@@ -9,20 +9,27 @@
     font-size: 30px;
 }
 
+.cd-dropdown{
+    color: #3e3e3a;
+    height: 30px;
+    text-align: center;
+}
+
 .main{
-    padding: 80px 20px 50px 20px;
+    padding: 50px 20px 50px 20px;
 }
 .intro-header {
-    margin: 50px 0px 50px 0px;
+    /*margin: 50px 0px 50px 0px;*/
     text-align: center;
     color: #f8f8f8;
 
 }
 .booking-input{
     width: 200px;
-    color: #999;
+    color: #3e3e3a;
     padding-left: 5px;
     text-align: center;
+    height: 30px;
 }
 
 .booking-input:hover, .cd-dropdown:hover{

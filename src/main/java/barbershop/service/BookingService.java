@@ -2,6 +2,7 @@ package barbershop.service;
 
 import barbershop.dao.BookingDao;
 import barbershop.entity.Booking;
+import javafx.util.Pair;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -28,4 +29,16 @@ public class BookingService {
 
     public void save(Booking booking){this.dao.save(booking);}
     public void delete(Booking booking){this.dao.delete(booking);}
+
+    public List<Pair<String,String>> getReformatedList(){
+
+        List<Pair<String,String>> reformatedBookings = new ArrayList<>();
+
+        for(Booking booking: dao.findAll()) {
+            reformatedBookings.add(new Pair(booking.getDate().toString() + " " + booking.getBarberId(),
+                    booking.getTime().toString().substring(0,5)));
+        }
+
+        return reformatedBookings;
+    }
 }

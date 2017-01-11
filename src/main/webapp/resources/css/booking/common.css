@@ -35,6 +35,7 @@
 .cd-dropdown ul {
 	list-style-type: none;
 	position: relative;
+	background: #e8e8e8;
 }
 
 .cd-dropdown ul li {

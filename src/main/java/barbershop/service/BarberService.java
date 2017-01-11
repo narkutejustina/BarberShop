@@ -32,4 +32,7 @@ public class BarberService {
     public void save(Barber barber) {
         dao.save(barber);
     }
+    public Barber getById(int barberId) {
+        return dao.findOne(barberId);
+    }
 }

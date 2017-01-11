@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpServletRequest;
+import java.sql.Date;
+import java.sql.Time;
 import java.text.ParseException;
 
 @Controller
@@ -29,13 +30,11 @@ public class BookingController {
     private SqlDateTimeConverter converter = new SqlDateTimeConverter();
 
     @RequestMapping("/booking")
-    public String booking(ModelMap model, HttpServletRequest request) {
+    public String booking(ModelMap model) {
 
         model.addAttribute("tasks", taskService.findAll());
         model.addAttribute("barbers", barberService.findAll());
-        model.addAttribute("bookings", bookingService.findAll());
-
-        model.addAttribute("fname","");
+        model.addAttribute("bookings", bookingService.getReformatedList());
 
         return "booking";
     }
@@ -64,19 +63,35 @@ public class BookingController {
         }
 
         bookingService.save(new Booking(new BookingPK(Integer.parseInt(barberId),client.getClientId(),
-                converter.convertDateFromString(date), converter.convertTimeFromString(time)),taskId));
+                Date.valueOf(date) , Time.valueOf(time+ ":00")),taskId));
+
 
 
         model.addAttribute("date", date);
-        model.addAttribute("barberId", barberId);
+        model.addAttribute("barber", barberService.getById(Integer.parseInt(barberId)).getFirstName());
         model.addAttribute("time", time);
-        model.addAttribute("name", firstName);
-        model.addAttribute("lastname", lastName);
-        model.addAttribute("phone", phone);
+        model.addAttribute("name", client.getFirstName());
+        model.addAttribute("email", client.getEmail());
+        model.addAttribute("lastname", client.getLastName());
+        model.addAttribute("phone", client.getPhone());
         model.addAttribute("taskInfo", task.getTitle());
         model.addAttribute("price", task.getPrice());
         model.addAttribute("duration", task.getDuration());
 
         return "bookingInformation";
     }
+
+//    @RequestMapping("/getBookings")
+//    public JsonResult getBookings(String barberId, String date)
+//    {
+//        List<String> takenTimes = new ArrayList<String>();
+//
+//       for(Booking booking: bookingService.findAll()){
+//           if((booking.getDate().toString()==barberId)&&(booking.getBarberId()==Integer.parseInt(barberId))){
+//               takenTimes.add(booking.getTime().toString().substring(0,4));
+//           }
+//       }
+//
+//        return Json (new{ FoodList = FoodList }, JsonRequestBehavior.AllowGet);
+//    }
 }
