@@ -44,15 +44,25 @@ footer {
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .homeHeading > p {
     /*padding: 20px;*/
     font-weight: 300;
     color: rgba(255, 255, 255, 0.7);
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+
+    .homeHeading > h1 {
+        font-size: 50px;
+    }
+   .homeHeading > p {
+        font-size: 18px;
+    }
 }
 
 
