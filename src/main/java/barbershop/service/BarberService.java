@@ -1,15 +1,12 @@
 package barbershop.service;
 
 import barbershop.dao.BarberDao;
-
-import java.util.ArrayList;
-import java.util.List;
+import barbershop.entity.Barber;
+import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-
-import barbershop.entity.Barber;
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Justinas on 2017-01-06.
@@ -35,5 +32,4 @@ public class BarberService {
     public void save(Barber barber) {
         dao.save(barber);
     }
-
 }

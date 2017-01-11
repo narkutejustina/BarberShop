@@ -2,22 +2,48 @@ package barbershop.service;
 
 import barbershop.dao.ClientDao;
 import barbershop.entity.Client;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
+import javax.transaction.Transactional;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by Justinas on 2017-01-06.
+ */
 
 @Service
-public class ClientService
-{
-    @Autowired
-    private ClientDao clientDao;
+@Transactional
+public class ClientService {
+    private final ClientDao dao;
 
-    public Collection<Client> getAllClients() {return this.clientDao.getAllClients();}
+    public ClientService(ClientDao dao) {
+        this.dao = dao;
+    }
 
-    public Client getClientById(int id)
-    {
-        //TODO: Need to check if the client exists, if not throw an Exception HTTP 404 NOT FOUNT
-        return this.clientDao.getClientById(id);
+    public List<Client> findAll() {
+        List<Client> clients = new ArrayList<>();
+        for(Client client: dao.findAll()) {
+            clients.add(client);
+        }
+        return clients;
+    }
+
+    public Client getById(int id) {
+        return dao.findOne(id);
+    }
+
+    public void save(Client client) {
+        dao.save(client);
+    }
+
+    public void delete(Client client){ dao.delete(client);}
+
+    public Client getByData(String firstName, String lastName, String phone, String email) {
+        for(Client c: dao.findAll()) {
+            if(c.isEqualByInfo(firstName,lastName,email,phone))
+                return c;
+        }
+        return null;
     }
 }

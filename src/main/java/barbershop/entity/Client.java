@@ -1,35 +1,42 @@
 package barbershop.entity;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
+import java.io.Serializable;
 
-public class Client
-{
-    private int id;
+@Entity(name="Client")
+@Table(name="Client")
+public class Client implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name = "ClientId")
+    private int clientId;
     private String firstName;
     private String lastName;
     private String email;
-    private String mobileNumber;
+    private String phone;
 
 
     public Client(){}
 
-    public Client(int id, String firstName, String lastName, String email, String mobileNumber)
+    public Client(String firstName, String lastName, String email, String phone)
     {
-        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.mobileNumber = mobileNumber;
+        this.phone = phone;
     }
 
-    public int getId()
+    public int getClientId()
     {
-        return id;
+        return clientId;
     }
 
-    public void setId(int id)
+    protected void setClientId(int id)
     {
-        this.id = id;
+        this.clientId = id;
     }
 
     public String getFirstName()
@@ -62,13 +69,18 @@ public class Client
         this.email = email;
     }
 
-    public String getMobileNumber()
+    public String getPhone()
     {
-        return mobileNumber;
+        return phone;
     }
 
-    public void setMobileNumber(String mobileNumber)
+    public void setPhone(String phone)
     {
-        this.mobileNumber = mobileNumber;
+        this.phone = phone;
+    }
+
+    public boolean isEqualByInfo(String fname, String lname, String email, String phone){
+        return fname.contentEquals(firstName)&&lname.contentEquals(lastName)
+                && email.contentEquals(this.email) && phone.contentEquals(this.phone);
     }
 }

@@ -28,8 +28,11 @@ public class TaskService {
         return tasks;
     }
 
+    public Task getById(int taskId) {return dao.findOne(taskId); }
+
     public void save(Task task) {
         dao.save(task);
     }
+
 
 }

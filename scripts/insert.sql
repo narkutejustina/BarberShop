@@ -1,6 +1,6 @@
 INSERT INTO Task(title, duration, price) VALUES
-  ('Cut', 20, 10),
-  ('Dye', 40, 15),
-  ('Format', 15, 8),
-  ('All', 60, 30);
+  ('Cut', 20, 30),
+  ('Dye', 40, 30),
+  ('Format', 15, 30),
+  ('All', 60, 60);
 
