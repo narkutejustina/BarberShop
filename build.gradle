@@ -9,6 +9,7 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
         classpath('se.transmode.gradle:gradle-docker:1.2')
         classpath 'mysql:mysql-connector-java:5.1.16'
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.0-M3'
     }
 }
 
@@ -18,6 +19,7 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'war'
 apply plugin: 'docker'
+apply plugin: 'org.junit.platform.gradle.plugin'
 
 war {
     baseName = 'barbershop'
@@ -37,6 +39,8 @@ dependencies {
     compile 'mysql:mysql-connector-java:5.1.16'
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile("org.junit.jupiter:junit-jupiter-api:5.0.0-M3")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:5.0.0-M3")
     providedCompile 'org.springframework.boot:spring-boot-starter-tomcat'
     providedCompile 'org.apache.tomcat.embed:tomcat-embed-jasper'
 }
