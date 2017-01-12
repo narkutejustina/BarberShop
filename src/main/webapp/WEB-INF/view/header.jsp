@@ -18,6 +18,15 @@
                         <li><a href="staff">Staff</a></li>
                         <li><a href="contacts">Contacts</a></li>
                         <li><a href="booking">Online Booking</a></li>
+                        <c:if test="${!empty sessionScope.logged_user}">
+                            <li><a href="#">Bookings</a></li>
+                        </c:if>
+                        <c:if test="${!empty sessionScope.logged_user}">
+                            <li><a href="logout">Logout</a></li>
+                        </c:if>
+                        <c:if test="${empty sessionScope.logged_user}">
+                            <li><a href="login">Login</a></li>
+                        </c:if>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->

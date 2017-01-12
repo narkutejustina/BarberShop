@@ -435,8 +435,6 @@ body {
     font-size: 2.5em;
     color: white;
     border: none;
-   
-    
 }
 
 .brand{
@@ -444,4 +442,18 @@ body {
   text-transform: none !important;
   font-weight: lighter;
   font-size: 30px;
+}
+
+.img-center {
+  margin: 0 auto;
+}
+
+.staff{
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.barbers {
+  font-size: 13px;
+
 }

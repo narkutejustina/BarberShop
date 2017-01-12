@@ -27,7 +27,8 @@
         <img class="thumbnail img-responsive" src="resources/images/prices.png"/>
     </div>
 </div>
-
+<script src="resources/js/jquery.js"></script>
+<script src="resources/js/creative.min.js"></script>
 </body>
 </html>
 </title>

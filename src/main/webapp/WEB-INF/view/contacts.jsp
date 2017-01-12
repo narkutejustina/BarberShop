@@ -3,6 +3,7 @@
     Created on : Jan 9, 2017, 12:21:51 PM
     Author     : Urte
 --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -23,6 +24,7 @@
     </head>
     <body>
         <%@include file="header.jsp" %>
+
         <!-- Contact with Map - START -->
 <div class="container">
     <div class="row">
@@ -62,13 +64,14 @@
 
                         <div class="form-group">
                             <div class="col-md-12 text-center ">
-                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                <button type="submit" class="btn btn-primary btn-xl">Submit</button>
                             </div>
                         </div>
                     </fieldset>
                 </form>
             </div>
         </div>
+        
         <div class="col-md-6">
             <div>
                 <div class="panel panel-default well well-sm">
@@ -91,6 +94,7 @@
 </div>
 
 <script src="resources/js/jquery.js"></script>
+
 <script src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyD_-3t2Bfyk-i-DRHy-83zSDnzThJQoWMg"></script>
 
 <script type="text/javascript">
@@ -129,5 +133,7 @@
         padding: 10px;
     }
 </style>
+        <script src="resources/js/bootstrap.min.js"></script>
+        <script src="resources/js/creative.min.js"></script>
     </body>
 </html>
