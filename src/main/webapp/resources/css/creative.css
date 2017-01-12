@@ -457,3 +457,6 @@ body {
   font-size: 13px;
 
 }
+input { 
+    text-align: left; 
+}

@@ -3,42 +3,151 @@
 <%@ taglib prefix="tags" uri="http://www.springframework.org/tags"%>
 <html lang="en">
 <head>
+    
+    
     <meta charset="utf-8">
     <title>Booking</title>
-
-    <link href="resources/css/background.css" rel="stylesheet">
+    
+    <!--<link href="resources/css/background.css" rel="stylesheet">-->
     <link href="resources/css/booking/booking.css" rel="stylesheet">
+   <link href="resources/css/bootstrap.css" rel="stylesheet">
+
+    <link href="resources/css/creative.css" rel="stylesheet">
+    
+    <link href="resources/css/font-awesome.css" rel="stylesheet">
+    
+    
+
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    
 </head>
 
     <%@include file="header.jsp" %>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="well well-sm">
+                    <section class="main">
+                        <form class="form-horizontal" method="post" action="/bookingInformation">
+                            <fieldset>
+                                <legend class="text-center contactHeader">BOOKING</legend>
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <input id="firstname" name="firstname"  type="text" placeholder="First name" required pattern="[a-zA-Z]+" class="booking-input form-control input-sm">                            </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <input id="lastname" name="lastname" type="text" placeholder="Last name" required pattern="[a-zA-Z]+" class="booking-input form-control input-sm">
+                                    </div>
+                                </div>
 
-    <div class="intro-header ">
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <input id="email" name="email" type="email" placeholder="Email" required class="booking-input  input-sm form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <input id="phone" name="phone" placeholder="Phone" pattern="\+370\d{8}$" required class="booking-input form-control input-sm">
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <select id="tasksDropdown" name="tasks"
+                                                class="dropdown cd-select booking-input form-control col-sm-10 input-sm">
+                                            <option value="-1" selected>Choose your service</option>
+                                            <c:forEach var="task" items="${tasks}">
+                                                <option value="${task.taskId}" class="icon-camera">
+                                                    ${task.title} ${task.price} &euro;</option>
+                                                </c:forEach>
+                                        </select>                            </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <!--<input placeholder="Date" class="textbox-n" type="text" onfocus="(this.type='datepicker')" class="booking-input form-control input-sm" id="datepicker" onchange="selected()">-->
+                                        <input id="datepicker" name="datepicker"  class="booking-input form-control input-sm" onchange="selected()">
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <select id="barbersDropDown" name="barbers" class="dropdown cd-select booking-input col-sm-10 form-control input-sm"
+                                                onchange="selected()">
+                                            <option value="-1" selected>Choose barber</option>
+                                            <c:forEach var="barber" items="${barbers}">
+                                                <option value="${barber.barberId}" class="icon-camera">
+                                                    ${barber.firstName} ${barber.lastName}</option>
+                                                </c:forEach>
+                                                
+                                        </select>                            
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <input id="timepicker" name="timepicker" placeholder="Time"  class="booking-input form-control input-sm">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-12 text-center ">
+                                        <input type="submit" class="btn btn-primary btn-xl page-scroll" value="Book">
+<!--                                        <button type="submit" class="btn btn-primary btn-xl">Submit</button>-->
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </section>
+                    <div id="hidden" style="display:none">
+                        <select id="bookingsList">
+                            <c:forEach var="booking" items="${bookings}">
+                                <option value="${booking.getKey()}">${booking.getValue()}</option>
+                            </c:forEach>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6"> </div>
+        </div>
+    </div>
+    
+    
+<!--<div class="container">
+    <div class="row">
+    <div class="intro-header col-md-6  well well-sm">
         <section class="main">
             <div align="">
             <form class="form-horizontal" method="post" action="/bookingInformation">
 
                 <div class="form-group">
                     <label class="col-sm-offset-3 col-sm-2" >First Name:</label>
-                    <div class="col-sm-3">
-                        <input id="firstname" name="firstname" class="booking-input form-control input-sm">
+                    <div class="col-md-10 col-md-offset-1">
+                        <input id="firstname" name="firstname"  type="text" required pattern="[a-zA-Z]+" class="booking-input form-control input-sm">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-offset-3 col-sm-2" >Last Name:</label>
-                    <div class="col-sm-3">
-                        <input id="lastname" name="lastname" class="booking-input form-control input-sm">
+                    <div class="col-md-10 col-md-offset-1">
+                        <input id="lastname" name="lastname" type="text" required pattern="[a-zA-Z]+" class="booking-input form-control input-sm">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-offset-3 col-sm-2" >Phone:</label>
-                    <div class="col-sm-3">
-                        <input id="phone" name="phone" class="booking-input form-control input-sm">
+                    <label class="col-sm-offset-3 col-sm-2" >Phone: (+370XXXXXXXX)</label>
+                    <div class="col-md-10 col-md-offset-1">
+                        <input id="phone" name="phone" pattern="\+370\d{8}$" required class="booking-input form-control input-sm">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-offset-3 col-sm-2" >Email:</label>
-                    <div class="col-sm-3">
-                        <input id="email" name="email"  class="booking-input form-control input-sm">
+                    <div class="col-md-10 col-md-offset-1">
+                        <input id="email" name="email" type="email" required class="booking-input form-control input-sm">
                     </div>
                 </div>
                 <%--<div class="form-group">--%>
@@ -113,6 +222,9 @@
             </select>
         </div>
     </div>
+                <div class="col-md-6"></div>
+    </div>
+</div>              -->
 
 </body>
 

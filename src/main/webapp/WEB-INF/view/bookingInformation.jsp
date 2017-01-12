@@ -6,14 +6,17 @@
     <meta charset="utf-8">
     <title>Booking</title>
 
-    <link href="resources/css/background.css" rel="stylesheet">
     <link href="resources/css/booking/booking.css" rel="stylesheet">
+    <link href="resources/css/background.css" rel="stylesheet">
+   <link href="resources/css/bootstrap.css" rel="stylesheet">
 
+    <link href="resources/css/creative.css" rel="stylesheet">
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
 <%@include file="header.jsp" %>
 
-<div class="intro-header ">
+<div class="intro-header well well-sm">
     <section class="main">
         <h1> Your Booking Information</h1>
         <br/>
