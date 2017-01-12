@@ -29,7 +29,7 @@
                     <label class="col-md-4 control-label" for="username">Username:</label>
                     <div class="col-md-4">
                         <input id="username" name="username" type="text" placeholder="Username"
-                               class="form-control input-md" value="${user.username}" required/>
+                               class="booking-input form-control input-sm" value="${user.username}" required/>
                     </div>
                 </div>
 
@@ -37,7 +37,7 @@
                     <label class="col-md-4 control-label" for="password">Password:</label>
                     <div class="col-md-4">
                         <input id="password" name="password" type="password" placeholder="Password"
-                               class="form-control input-md" value="${user.password}" required/>
+                               class="booking-input form-control input-sm" value="${user.password}" required/>
                     </div>
                 </div>
 

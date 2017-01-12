@@ -9,63 +9,80 @@
     <link href="resources/css/background.css" rel="stylesheet">
     <link href="resources/css/booking/booking.css" rel="stylesheet">
 </head>
-<body>
 
     <%@include file="header.jsp" %>
 
     <div class="intro-header ">
         <section class="main">
+            <div align="">
             <form class="form-horizontal" method="post" action="/bookingInformation">
+
                 <div class="form-group">
                     <label class="col-sm-offset-3 col-sm-2" >First Name:</label>
                     <div class="col-sm-3">
-                        <input id="firstname" name="firstname" class="booking-input">
+                        <input id="firstname" name="firstname" class="booking-input form-control input-sm">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-offset-3 col-sm-2" >Last Name:</label>
                     <div class="col-sm-3">
-                        <input id="lastname" name="lastname" class="booking-input">
+                        <input id="lastname" name="lastname" class="booking-input form-control input-sm">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-offset-3 col-sm-2" >Phone:</label>
                     <div class="col-sm-3">
-                        <input id="phone" name="phone" class="booking-input">
+                        <input id="phone" name="phone" class="booking-input form-control input-sm">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-offset-3 col-sm-2" >Email:</label>
                     <div class="col-sm-3">
-                        <input id="email" name="email"  class="booking-input">
+                        <input id="email" name="email"  class="booking-input form-control input-sm">
                     </div>
                 </div>
+                <%--<div class="form-group">--%>
+                    <%--<label class="col-sm-offset-3 col-sm-2" >Services:</label>--%>
+                    <%--<div class="col-sm-3">--%>
+                        <%--<select id="cd-dropdown" name="tasks"--%>
+                                <%--class="dropdown cd-select cd-dropdown col-sm-10 form-control input-sm">--%>
+                            <%--<option value="-1" selected>Choose your service</option>--%>
+                            <%--<c:forEach var="task" items="${tasks}">--%>
+                                <%--<option value="${task.taskId}" class="icon-camera">--%>
+                                        <%--${task.title} (${task.duration}min), ${task.price} &euro;</option>--%>
+                            <%--</c:forEach>--%>
+                        <%--</select>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
                 <div class="form-group">
                     <label class="col-sm-offset-3 col-sm-2" >Services:</label>
                     <div class="col-sm-3">
-                        <select id="cd-dropdown" name="tasks" class="cd-select cd-dropdown col-sm-10">
+                        <select id="tasksDropdown" name="tasks"
+                                class="dropdown cd-select booking-input col-sm-10">
                             <option value="-1" selected>Choose your service</option>
                             <c:forEach var="task" items="${tasks}">
                                 <option value="${task.taskId}" class="icon-camera">
-                                        ${task.title} (${task.duration}min), ${task.price} &euro;</option>
+                                        ${task.title} ${task.price} &euro;</option>
                             </c:forEach>
                         </select>
                     </div>
                 </div>
 
 
+
                 <div class="form-group">
                     <label class="col-sm-offset-3 col-sm-2" >Date:</label>
                     <div class="col-sm-3">
-                        <input id="datepicker" name="datepicker"  class="booking-input" onchange="selected()">
+                        <input id="datepicker" name="datepicker"  class="booking-input form-control input-sm" onchange="selected()">
                     </div>
                 </div>
 
 
                 <div class="form-group">
                     <label class="col-sm-offset-3 col-sm-2" >Barber:</label>
-                    <div class="col-sm-3">
-                        <select id="barbersDropDown" name="barbers" class="cd-select booking-input col-sm-10" onchange="selected()">
+                    <div class="col-sm-3 ">
+                        <select id="barbersDropDown" name="barbers" class="dropdown cd-select booking-input col-sm-10"
+                                onchange="selected()">
                             <option value="-1" selected>Choose barber</option>
                             <c:forEach var="barber" items="${barbers}">
                                 <option value="${barber.barberId}" class="icon-camera">
@@ -78,13 +95,14 @@
                 <div class="form-group">
                     <label class="col-sm-offset-3 col-sm-2" >Time:</label>
                     <div class="col-sm-3 ">
-                        <input id="timepicker" name="timepicker"  class="booking-input">
+                        <input id="timepicker" name="timepicker"  class="booking-input form-control input-sm">
                     </div>
                 </div>
 
 
                 <input type="submit" class="btn btn-primary btn-xl page-scroll" value="Book">
             </form>
+            </div>
         </section>
 
         <div id="hidden" style="display:none">
@@ -101,7 +119,7 @@
 <link rel="stylesheet" type="text/css" href="resources/datetimepicker/jquery.datetimepicker.css" />
 
 <script src="resources/js/jquery.js"></script>
-<script src="resources/datetimepicker//build/jquery.datetimepicker.full.min.js"></script>
+<script src="resources/datetimepicker/js/jquery.datetimepicker.full.min.js"></script>
 <script src="resources/js/booking/modernizr.custom.63321.js"></script>
 <script type="text/javascript" src="resources/js/booking/jquery.dropdown.js"></script>
 <script src="resources/js/creative.min.js"></script>

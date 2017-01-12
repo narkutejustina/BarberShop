@@ -19,3 +19,17 @@ body {
 .contactButton{
     font-size: 10px;
 }
+
+.booking-input{
+    width: 200px;
+    color: #3e3e3a;
+    padding-left: 5px;
+    text-align: center;
+    height: 30px;
+}
+
+.booking-input:hover, .cd-dropdown:hover{
+    border-color: #e66b20;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #e66b20;
+    outline: 0 none;
+}

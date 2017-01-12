@@ -1,6 +1,6 @@
 @import url('../bootstrap.css');
 @import url('../creative.css');
-@import url('style6.css');
+/*@import url('style6.css');*/
 
 .brand{
     font-family: 'Great Vibes', cursive !important;
@@ -9,12 +9,25 @@
     font-size: 30px;
 }
 
-.cd-dropdown{
-    color: #3e3e3a;
+/*#cd-dropdown{*/
+    /*color: #3e3e3a;*/
+    /*height: 30px;*/
+    /*width: 200px;*/
+    /*text-align: center;*/
+    /*background-color: white;*/
+/*}*/
+/*.cd-dropdown{*/
+    /*color: #3e3e3a;*/
+    /*height: 30px;*/
+    /*text-align: center;*/
+/*}*/
+.dropdown{
+    background-color: white;
+    width: 200px;
     height: 30px;
-    text-align: center;
-}
+    color: #3e3e3a;
 
+}
 .main{
     padding: 50px 20px 50px 20px;
 }
@@ -30,6 +43,7 @@
     padding-left: 5px;
     text-align: center;
     height: 30px;
+    background-color: white;
 }
 
 .booking-input:hover, .cd-dropdown:hover{

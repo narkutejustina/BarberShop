@@ -18,8 +18,8 @@
         <h1> Your Booking Information</h1>
         <br/>
         <h3>Appointment:${date} ${time}</h3>
-        <h3> Barber: ${barberName}</h3>
-        <h3> Service Info: ${taskInfo} ${duration}min  ${price} &euro;</h3>
+        <%--<h3> Barber: ${barberName}</h3>--%>
+        <h3> Service Info: ${taskInfo}  ${price} &euro;</h3>
         <br/>
         <h3> Client: ${name} ${lastname}</h3>
         <h3> Phone: ${phone}</h3>
