@@ -29,7 +29,11 @@ body {
 }
 
 .booking-input:hover, .cd-dropdown:hover{
-    border-color: #e66b20;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #e66b20;
+    border-color: #8B4513;
+    box-shadow: 0 1px 1px #8B4513 inset, 0 0 8px #8B4513;
     outline: 0 none;
+}
+
+.bookingsTable {
+    color:white;
 }

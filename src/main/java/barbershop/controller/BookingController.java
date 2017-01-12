@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.sql.Date;
 import java.sql.Time;
 import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class BookingController {
@@ -26,6 +28,8 @@ public class BookingController {
     private BookingService bookingService;
     @Autowired
     private ClientService clientService;
+    @Autowired
+    private BookingClientsService bookingClientsService;
 
     private SqlDateTimeConverter converter = new SqlDateTimeConverter();
 
@@ -39,10 +43,19 @@ public class BookingController {
         return "booking";
     }
 
+//    @RequestMapping("/bookings")
+//    public String bookings(ModelMap model) {
+//
+//
+//        model.addAttribute("bookings", bookingService.findAll());
+//
+//        return "bookings";
+//    }
+
     @RequestMapping("/bookings")
     public String bookings(ModelMap model) {
 
-        model.addAttribute("bookings", bookingService.findAll());
+        model.addAttribute("bookings", bookingClientsService.getBookingClientsList());
         return "bookings";
     }
 
