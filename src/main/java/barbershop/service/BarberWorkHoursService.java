@@ -2,6 +2,7 @@ package barbershop.service;
 
 import barbershop.dao.BarberWorkHoursDao;
 import barbershop.entity.BarberWorkHours;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -18,6 +19,7 @@ public class BarberWorkHoursService {
 
     private final BarberWorkHoursDao dao;
 
+    @Autowired
     public BarberWorkHoursService(BarberWorkHoursDao dao) {
         this.dao = dao;
     }

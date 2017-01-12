@@ -2,6 +2,7 @@ package barbershop.service;
 
 import barbershop.dao.TaskDao;
 import barbershop.entity.Task;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -16,6 +17,7 @@ import java.util.List;
 public class TaskService {
     private final TaskDao dao;
 
+    @Autowired
     public TaskService(TaskDao dao) {
         this.dao = dao;
     }

@@ -3,6 +3,7 @@ package barbershop.service;
 import barbershop.dao.BookingDao;
 import barbershop.entity.Booking;
 import javafx.util.Pair;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -15,6 +16,7 @@ public class BookingService {
 
     private final BookingDao dao;
 
+    @Autowired
     public BookingService(BookingDao dao) {
         this.dao = dao;
     }

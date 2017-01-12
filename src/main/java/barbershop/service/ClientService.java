@@ -2,6 +2,7 @@ package barbershop.service;
 
 import barbershop.dao.ClientDao;
 import barbershop.entity.Client;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -17,6 +18,7 @@ import java.util.List;
 public class ClientService {
     private final ClientDao dao;
 
+    @Autowired
     public ClientService(ClientDao dao) {
         this.dao = dao;
     }

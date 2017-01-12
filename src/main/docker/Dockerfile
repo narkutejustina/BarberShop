@@ -1,4 +1,4 @@
-FROM frolvlad/alpine-oraclejdk8:slim
+FROM frolvlad/alpine-oraclejdk8:full
 EXPOSE 8080
 VOLUME /tmp
 ADD barbershop-0.0.1-SNAPSHOT.war app.war

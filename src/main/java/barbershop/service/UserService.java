@@ -6,6 +6,7 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import barbershop.dao.UserDao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import barbershop.dao.UserDao;
@@ -17,6 +18,7 @@ public class UserService {
 
     private final UserDao userDao;
 
+    @Autowired
     public UserService(UserDao userDao) {
         this.userDao = userDao;
     }

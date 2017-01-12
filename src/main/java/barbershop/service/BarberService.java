@@ -3,7 +3,7 @@ package barbershop.service;
 import barbershop.dao.BarberDao;
 import barbershop.entity.Barber;
 import org.springframework.stereotype.Service;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,8 +15,11 @@ import java.util.List;
 @Service
 @Transactional
 public class BarberService {
+
+
     private final BarberDao dao;
 
+    @Autowired
     public BarberService(BarberDao dao) {
         this.dao = dao;
     }
