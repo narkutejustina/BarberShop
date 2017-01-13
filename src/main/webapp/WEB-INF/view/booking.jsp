@@ -12,7 +12,7 @@
         <link href="resources/css/booking/onlineBooking.css" rel="stylesheet">
         <link href="resources/css/bootstrap.css" rel="stylesheet">
 
-        <link href="resources/css/creative.css" rel="stylesheet">
+       
 
         <link href="resources/css/font-awesome.css" rel="stylesheet">
         
@@ -25,7 +25,7 @@
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-
+ <link href="resources/css/creative.css" rel="stylesheet">
     </head>
     <body ng-app="validationApp" ng-controller="mainController">
     <%@include file="header.jsp" %>
@@ -244,9 +244,8 @@
 <script src="resources/datetimepicker/js/jquery.datetimepicker.full.min.js"></script>
 <script src="resources/js/booking/modernizr.custom.63321.js"></script>
 <script type="text/javascript" src="resources/js/booking/jquery.dropdown.js"></script>
-<script src="resources/js/creative.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> 
 
+<script src="resources/js/creative.min.js"></script>
 <script type="text/javascript">
 
     var times=['08:00','08:30','09:00','09:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30',
@@ -332,5 +331,6 @@
             allowTimes: availableTimes
         });
     }
+    
 </script>
 </html>
