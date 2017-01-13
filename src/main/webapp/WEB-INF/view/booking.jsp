@@ -2,59 +2,69 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="tags" uri="http://www.springframework.org/tags"%>
 <html lang="en">
-<head>
-    
-    
-    <meta charset="utf-8">
-    <title>Booking</title>
-    
-    <!--<link href="resources/css/background.css" rel="stylesheet">-->
-    <link href="resources/css/booking/booking.css" rel="stylesheet">
-   <link href="resources/css/bootstrap.css" rel="stylesheet">
+    <head>
 
-    <link href="resources/css/creative.css" rel="stylesheet">
-    
-    <link href="resources/css/font-awesome.css" rel="stylesheet">
-    
-    
 
- <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <meta charset="utf-8">
+        <title>Booking</title>
+
+        <!--<link href="resources/css/background.css" rel="stylesheet">-->
+        <link href="resources/css/booking/booking.css" rel="stylesheet">
+        <link href="resources/css/bootstrap.css" rel="stylesheet">
+
+        <link href="resources/css/creative.css" rel="stylesheet">
+
+        <link href="resources/css/font-awesome.css" rel="stylesheet">
+        
+        <!--Angular-->
+        <script src="http://code.angularjs.org/1.2.6/angular.js"></script> 
+        <script src="resources/js/app.js"></script>
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    
-</head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
+    </head>
+    <body ng-app="validationApp" ng-controller="mainController">
     <%@include file="header.jsp" %>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <div class="well well-sm">
                     <section class="main">
-                        <form class="form-horizontal" method="post" action="/bookingInformation">
+                        <!--<form class="form-horizontal" method="post" action="/bookingInformation" >-->
+                        <form class="form-horizontal" ng-submit="submitForm(userForm.$valid)" novalidate action="/bookingInformation" >
                             <fieldset>
                                 <legend class="text-center contactHeader">BOOKING</legend>
                                 <div class="form-group">
                                     <div class="col-md-10 col-md-offset-1">
-                                        <input id="firstname" name="firstname"  type="text" placeholder="First name" required pattern="[a-zA-Z]+" class="booking-input form-control input-sm">                            </div>
+                                        <!--<input id="firstname" name="firstname"  type="text" placeholder="First name" required pattern="[a-zA-Z]+" class="booking-input form-control input-sm">                            </div>-->
+                                        <input id="firstname" name="firstname" ng-model="firstname" ng-pattern="[a-zA-Z]+" type="text" placeholder="First name" required class="booking-input form-control input-sm">                            </div>
+<p ng-show="userForm.firstname.$touched && userForm.firstname.$invalid" class="help-block">Your name is required.</p>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-10 col-md-offset-1">
-                                        <input id="lastname" name="lastname" type="text" placeholder="Last name" required pattern="[a-zA-Z]+" class="booking-input form-control input-sm">
+                                        <!--<input id="lastname" name="lastname" type="text" placeholder="Last name" required pattern="[a-zA-Z]+" class="booking-input form-control input-sm">-->
+                                        <input id="lastname" name="lastname" ng-model="lastname" type="text" ng-pattern="[a-zA-Z]+" placeholder="Last name" required class="booking-input form-control input-sm">
+<p ng-show="userForm.lastname.$error.pattern" class="help-block">It should be only letters.</p>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <div class="col-md-10 col-md-offset-1">
-                                        <input id="email" name="email" type="email" placeholder="Email" required class="booking-input  input-sm form-control">
+                                         <!--<input id="email" name="email" type="email" placeholder="Email" required class="booking-input  input-sm form-control">-->
+                                        <input id="email" name="email" ng-model="email" type="email" placeholder="Email" required class="booking-input  input-sm form-control">
+                                    <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <div class="col-md-10 col-md-offset-1">
-                                        <input id="phone" name="phone" placeholder="Phone" pattern="\+370\d{8}$" required class="booking-input form-control input-sm">
-
+                                        <!--<input id="phone" name="phone" placeholder="Phone" pattern="\+370\d{8}$" required class="booking-input form-control input-sm">-->
+                                        <input id="phone" name="phone" ng-model="phone" placeholder="Phone" ng-pattern="\+370\d{8}$" required class="booking-input form-control input-sm">
+<p ng-show="userForm.phone.$error.pattern" class="help-block">It should be +370 x xxx xxxx.</p>
                                     </div>
                                 </div>
 
@@ -97,7 +107,7 @@
 
                                 <div class="form-group">
                                     <div class="col-md-12 text-center ">
-                                        <input type="submit" class="btn btn-primary btn-xl page-scroll" value="Book">
+                                        <input type="submit" class="btn btn-primary btn-xl page-scroll" value="Book" ng-disabled="userForm.$invalid">
 <!--                                        <button type="submit" class="btn btn-primary btn-xl">Submit</button>-->
                                     </div>
                                 </div>
@@ -235,6 +245,7 @@
 <script src="resources/js/booking/modernizr.custom.63321.js"></script>
 <script type="text/javascript" src="resources/js/booking/jquery.dropdown.js"></script>
 <script src="resources/js/creative.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> 
 
 <script type="text/javascript">
 
