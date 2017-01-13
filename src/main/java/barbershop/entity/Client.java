@@ -17,9 +17,16 @@ public class Client implements Serializable {
     private String lastName;
     private String email;
     private String phone;
-
+    private String comment;
 
     public Client(){}
+
+    public Client(String firstName, String lastName, String email)
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
 
     public Client(String firstName, String lastName, String email, String phone)
     {
@@ -27,6 +34,15 @@ public class Client implements Serializable {
         this.lastName = lastName;
         this.email = email;
         this.phone = phone;
+    }
+
+    public Client(String firstName, String lastName, String email, String phone, String comment)
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+        this.comment = comment;
     }
 
     public int getClientId()
@@ -77,6 +93,16 @@ public class Client implements Serializable {
     public void setPhone(String phone)
     {
         this.phone = phone;
+    }
+
+    public String getComment()
+    {
+        return comment;
+    }
+
+    public void setComment(String comment)
+    {
+        this.comment = comment;
     }
 
     public boolean isEqualByInfo(String fname, String lname, String email, String phone){

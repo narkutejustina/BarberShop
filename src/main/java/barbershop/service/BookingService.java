@@ -37,18 +37,18 @@ public class BookingService {
 //        return bookingDao.findByBookingId(id);
 //    }
 
-    public void save(Booking booking){this.bookingDao.save(booking);}
-    public void delete(Booking booking){this.bookingDao.delete(booking);}
+//    public void save(Booking booking){this.bookingDao.save(booking);}
+//    public void delete(Booking booking){this.bookingDao.delete(booking);}
 
-    public List<Pair<String,String>> getReformatedList(){
-
-        List<Pair<String,String>> reformatedBookings = new ArrayList<>();
-
-        for(Booking booking: bookingDao.findAll()) {
-            reformatedBookings.add(new Pair(booking.getDate().toString() + " " + booking.getBarberId(),
-                    booking.getTime().toString().substring(0,5)));
-        }
-        return reformatedBookings;
-    }
+//    public List<Pair<String,String>> getReformatedList(){
+//
+//        List<Pair<String,String>> reformatedBookings = new ArrayList<>();
+//
+//        for(Booking booking: bookingDao.findAll()) {
+//            reformatedBookings.add(new Pair(booking.getDate().toString() + " " + booking.getBarberId(),
+//                    booking.getTime().toString().substring(0,5)));
+//        }
+//        return reformatedBookings;
+//    }
 
 }

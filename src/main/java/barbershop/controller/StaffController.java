@@ -30,12 +30,12 @@ public class StaffController {
 
         //barberService.save(new Barber("name","lastname", "123", "email@wmil.com"));
 
-        List<Barber> barberList = barberService.findAll();
-        List<BarberWorkHours> barberWorkHoursList = barberWorkHoursService.findByBarberId(barberList.get(0).getBarberId());
-
-        request.setAttribute("barbers", barberList);
-        request.setAttribute("workHours", barberWorkHoursList);
-        request.setAttribute("barberInfo", barberList.get(0));
+//        List<Barber> barberList = barberService.findAll();
+//        List<BarberWorkHours> barberWorkHoursList = barberWorkHoursService.findByBarberId(barberList.get(0).getBarberId());
+//
+//        request.setAttribute("barbers", barberList);
+//        request.setAttribute("workHours", barberWorkHoursList);
+//        request.setAttribute("barberInfo", barberList.get(0));
 
         return "staff";
     }

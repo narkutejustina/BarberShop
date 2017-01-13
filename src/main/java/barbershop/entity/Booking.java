@@ -1,39 +1,49 @@
 package barbershop.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.IdClass;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
 import java.sql.Time;
 
 @Entity(name="Booking")
 @Table(name="Booking")
-@IdClass(BookingPK.class)
 public class Booking implements Serializable{
 
     private static final long serialVersionUID = 1L;
 
     @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @Column(name = "BookingId")
+    private int bookingId;
+
     private int barberId;
-    @Id
+
     private int clientId;
-    @Id
+
     private Date date;
-    @Id
+
     private Time time;
 
     private int taskId;
 
     protected Booking(){}
 
-    public Booking(BookingPK pk, int taskId) {
-        this.barberId = pk.getBarberId();
-        this.clientId = pk.getClientId();
-        this.date = pk.getDate();
-        this.time = pk.getTime();
+    public Booking(int berberId, int clientId, Date date, Time time, int taskId) {
+        this.barberId = barberId;
+        this.clientId = clientId;
+        this.date = date;
+        this.time = time;
         this.taskId = taskId;
+    }
+
+    public int getBookingId()
+    {
+        return bookingId;
+    }
+
+    public void setBookingId(int bookingId)
+    {
+        this.bookingId = bookingId;
     }
 
     public int getBarberId() {
