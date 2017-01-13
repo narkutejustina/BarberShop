@@ -32,6 +32,11 @@ public class BookingService {
         return bookings;
     }
 
+//    public Booking findBooking(int id)
+//    {
+//        return bookingDao.findByBookingId(id);
+//    }
+
     public void save(Booking booking){this.bookingDao.save(booking);}
     public void delete(Booking booking){this.bookingDao.delete(booking);}
 

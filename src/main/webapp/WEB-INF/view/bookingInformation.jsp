@@ -17,7 +17,7 @@
     <section class="main">
         <h1> Your Booking Information</h1>
         <br/>
-        <h3>Appointment:${date} ${time}</h3>
+        <h3>Appointment: ${date} ${time}</h3>
         <%--<h3> Barber: ${barberName}</h3>--%>
         <h3> Service Info: ${taskInfo}  ${price} &euro;</h3>
         <br/>

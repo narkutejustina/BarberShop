@@ -27,6 +27,8 @@
                 <th>Time</th>
                 <th>First Name</th>
                 <th>Last Name</th>
+                <th>Edit</th>
+                <th>Delete</th>
                 <%--<th>Barber</th>--%>
             </tr>
             </thead>
@@ -39,6 +41,12 @@
                     <td>${booking.getKey().time}</td>
                     <td>${booking.getValue().firstName}</td>
                     <td>${booking.getValue().lastName}</td>
+                    <td>
+                        <a href="#"><span class="glyphicon glyphicon-pencil" style="color: navajowhite"></span></a>
+                    </td>
+                    <td>
+                        <a href="#"><span class="glyphicon glyphicon-trash" style="color: darkred"></span></a>
+                    </td>
                 </tr>
             </c:forEach>
 
