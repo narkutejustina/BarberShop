@@ -19,6 +19,7 @@
 <%@include file="header.jsp" %>
 
     <div class="container">
+        <div class="well well-sm">
         <table class="table table-sm table-hover table-responsive bookingsTable" >
             <thead>
             <tr>
@@ -52,6 +53,7 @@
 
             </tbody>
         </table>
+        </div>
     </div>
 </body>
 </html>
