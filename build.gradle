@@ -32,7 +32,6 @@ targetCompatibility = 1.8
 repositories {
     mavenCentral()
 }
-
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     compile 'javax.servlet:jstl:1.2'

@@ -59,6 +59,7 @@ public class LoginController {
 
     @GetMapping("/logout")
     public String logout(HttpSession session) {
+        session.setAttribute("logged_user", null);
         session.invalidate();
         return "login";
     }

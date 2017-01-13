@@ -9,7 +9,7 @@
         <title>Booking</title>
 
         <!--<link href="resources/css/background.css" rel="stylesheet">-->
-        <link href="resources/css/booking/booking.css" rel="stylesheet">
+        <link href="resources/css/booking/onlineBooking.css" rel="stylesheet">
         <link href="resources/css/bootstrap.css" rel="stylesheet">
 
         <link href="resources/css/creative.css" rel="stylesheet">

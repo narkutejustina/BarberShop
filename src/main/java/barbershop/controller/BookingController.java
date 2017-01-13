@@ -8,13 +8,17 @@ import barbershop.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
 import java.sql.Date;
 import java.sql.Time;
 import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class BookingController {
@@ -26,6 +30,8 @@ public class BookingController {
     private BookingService bookingService;
     @Autowired
     private ClientService clientService;
+    @Autowired
+    private BookingClientsService bookingClientsService;
 
     private SqlDateTimeConverter converter = new SqlDateTimeConverter();
 
@@ -39,10 +45,26 @@ public class BookingController {
         return "booking";
     }
 
+//    @GetMapping("/delete-booking")
+//    public String deleteBooking(@RequestParam int id, ModelMap model, HttpServletRequest request){
+//        bookingService.delete(new BookingPK(id));
+//        model.addAttribute("bookings", bookingClientsService.getBookingClientsList());
+//        return "bookings";
+//    }
+
+//    @RequestMapping("/bookings")
+//    public String bookings(ModelMap model) {
+//
+//
+//        model.addAttribute("bookings", bookingService.findAll());
+//
+//        return "bookings";
+//    }
+
     @RequestMapping("/bookings")
     public String bookings(ModelMap model) {
 
-        model.addAttribute("bookings", bookingService.findAll());
+        model.addAttribute("bookings", bookingClientsService.getBookingClientsList());
         return "bookings";
     }
 
@@ -64,7 +86,6 @@ public class BookingController {
 
         bookingService.save(new Booking(new BookingPK(Integer.parseInt(barberId),client.getClientId(),
                 Date.valueOf(date) , Time.valueOf(time+ ":00")),taskId));
-
 
 
         model.addAttribute("date", date);
