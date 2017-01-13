@@ -32,13 +32,19 @@ public class BookingService {
         return bookings;
     }
 
-//    public Booking findBooking(int id)
-//    {
-//        return bookingDao.findByBookingId(id);
-//    }
+    public Booking findBooking(int id)
+    {
+        return bookingDao.findOne(id);
+    }
 
-//    public void save(Booking booking){this.bookingDao.save(booking);}
-//    public void delete(Booking booking){this.bookingDao.delete(booking);}
+    public void save(Booking booking){this.bookingDao.save(booking);}
+
+    public void delete(int id)
+    {
+        this.bookingDao.delete(id);
+    }
+
+     public void delete(Booking booking){this.bookingDao.delete(booking);}
 
 //    public List<Pair<String,String>> getReformatedList(){
 //

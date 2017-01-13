@@ -12,7 +12,7 @@ public class Booking implements Serializable{
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue (strategy = GenerationType.AUTO)
     @Column(name = "BookingId")
     private int bookingId;
 
@@ -28,7 +28,7 @@ public class Booking implements Serializable{
 
     protected Booking(){}
 
-    public Booking(int berberId, int clientId, Date date, Time time, int taskId) {
+    public Booking(int barberId, int clientId, Date date, Time time, int taskId) {
         this.barberId = barberId;
         this.clientId = clientId;
         this.date = date;

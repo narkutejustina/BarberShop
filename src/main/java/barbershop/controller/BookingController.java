@@ -7,10 +7,7 @@ import barbershop.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Date;
@@ -32,15 +29,67 @@ public class BookingController {
     @Autowired
     private BookingClientsService bookingClientsService;
 
-//    @RequestMapping("/booking")
-//    public String booking(ModelMap model) {
-//
-//        model.addAttribute("tasks", taskService.findAll());
-//        model.addAttribute("barbers", barberService.findAll());
+
+    @GetMapping("/bookings")
+    public String bookings(ModelMap model) {
+
+        model.addAttribute("bookings", bookingClientsService.getBookingClientsList());
+        return "bookings";
+    }
+
+    @PostMapping("/savebooking")
+    public String saveBooking(@RequestParam(value="firstname") String firstName,
+                              @RequestParam(value="lastname") String lastName,
+                              @RequestParam String email,
+                              @RequestParam String phone,
+                              @RequestParam(value="tasks") String taskId,
+                              @RequestParam(value="barbers") String barberId,
+                              @RequestParam(value="datepicker") String date,
+                              @RequestParam(value="timepicker") String time) throws ParseException
+    {
+        try
+        {
+            if (taskService.getById(Integer.parseInt(taskId)) == null)
+            {
+                throw new ClassNotFoundException();
+            }
+        }   catch (ClassNotFoundException e){
+            System.out.println("Caught "+ e);
+            e.printStackTrace();}
+
+        Client client = clientService.getByData(firstName, lastName, phone, email);
+        if(client == null){
+            client = new Client(firstName,lastName,email,phone);
+            clientService.save(client);
+        }
+
+//        bookingService.save(new Booking(barberId,client.getClientId(),
+//                Date.valueOf(date), Time.valueOf(time+":00"), taskId));
+
+        bookingService.save(new Booking(Integer.parseInt(barberId),client.getClientId(),
+                Date.valueOf(date) , Time.valueOf(time+ ":00"), Integer.parseInt(taskId)));
+
+        return "test";
+    }
+
+    @PostMapping("/deletebooking")
+    public String deleteBooking(@RequestParam int id)
+    {
+        bookingService.delete(id);
+
+        return "test";
+    }
+
+
+    @RequestMapping("/test")
+    public String test(ModelMap model) {
+
+        model.addAttribute("tasks", taskService.findAll());
+        model.addAttribute("barbers", barberService.findAll());
 //        model.addAttribute("bookings", bookingService.getReformatedList());
-//
-//        return "booking";
-//    }
+
+        return "test";
+    }
 
 //    @GetMapping("/delete-booking")
 //    public String deleteBooking(@RequestParam int id, ModelMap model, HttpServletRequest request){
@@ -57,12 +106,7 @@ public class BookingController {
 //        return "bookings";
 //    }
 
-    @RequestMapping("/bookings")
-    public String bookings(ModelMap model) {
 
-        model.addAttribute("bookings", bookingClientsService.getBookingClientsList());
-        return "bookings";
-    }
 
 //    @RequestMapping(value = "/bookingInformation", method = RequestMethod.POST)
 //    public String information(ModelMap model, @RequestParam(value="datepicker") String date,

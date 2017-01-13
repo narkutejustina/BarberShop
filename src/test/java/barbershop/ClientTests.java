@@ -23,6 +23,7 @@ public class ClientTests {
     @Test
     public void createClient_idEquals0() {
         Assert.assertEquals(0, client.getClientId());
+
     }
 
     @Test
