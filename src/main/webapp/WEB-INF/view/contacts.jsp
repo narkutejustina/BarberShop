@@ -19,9 +19,10 @@
         
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
+<script src="https://code.angularjs.org/1.4.0-rc.1/angular.js"></script>
+        <script src="resources/js/app.js"></script>
     </head>
-    <body>
+    <body ng-app="validationApp" ng-controller="mainController">
         <%@include file="header.jsp" %>
 
         <!-- Contact with Map - START -->
@@ -29,7 +30,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="well well-sm">
-                <form class="form-horizontal" method="post">
+                <form name="userForm" class="form-horizontal" ng-submit="submitForm(userForm.$valid)" novalidate class="form-horizontal" method="post">
                     <fieldset>
                         <legend class="text-center contactHeader">CONTACT US</legend>
                         <div class="form-group">
