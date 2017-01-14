@@ -58,9 +58,12 @@
                 <th>Time</th>
                 <th>First Name</th>
                 <th>Last Name</th>
+                <th>Barber</th>
+                <th>Service</th>
+                <th>Price</th>
                 <th>Edit</th>
                 <th>Delete</th>
-                <%--<th>Barber</th>--%>
+
             </tr>
             </thead>
             <tbody>
@@ -73,6 +76,20 @@
                     <td>${booking.getValue().firstName}</td>
                     <td>${booking.getValue().lastName}</td>
 
+                    <td>
+                    <c:forEach var="barber" items="${barbers}">
+                        <c:if test="${booking.getKey().barberId == barber.barberId}">
+                         ${barber.firstName}
+                         </c:if>
+                    </c:forEach>
+                    </td>
+
+                    <c:forEach var="task" items="${tasks}">
+                    <c:if test="${booking.getKey().taskId == task.taskId}">
+                        <td>${task.title}</td>
+                        <td>${task.price}</td>
+                        </c:if>
+                    </c:forEach>
 
                     <td><button class="open-edit btn btn-primary btn-xs"
                                 data-id="${booking.getKey().bookingId}"
