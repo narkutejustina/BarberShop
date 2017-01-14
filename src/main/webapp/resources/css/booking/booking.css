@@ -1,6 +1,5 @@
 @import url('../bootstrap.css');
 @import url('../creative.css');
-/*@import url('style6.css');*/
 
         body {
         padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
@@ -10,66 +9,15 @@
         background-size: cover;
         -o-background-size: cover;
         }
-/*.brand{
-    font-family: 'Great Vibes', cursive !important;
-    text-transform: none !important;
-    font-weight: lighter;
-    font-size: 30px;
-}*/
 
-/*#cd-dropdown{*/
-    /*color: #3e3e3a;*/
-    /*height: 30px;*/
-    /*width: 200px;*/
-    /*text-align: center;*/
-    /*background-color: white;*/
-/*}*/
-/*.cd-dropdown{*/
-    /*color: #3e3e3a;*/
-    /*height: 30px;*/
-    /*text-align: center;*/
-/*}*/
-/*.dropdown{
-    background-color: white;
-    width: 200px;
-    height: 30px;
-    color: #3e3e3a;
-    text-align:center;
-
-}*/
 .main{
     padding: 50px 20px 50px 20px;
 }
-/*.intro-header {
-    margin: 50px 0px 50px 0px;
-    text-align: center;
-    color: #f8f8f8;
-
-}*/
-/*.booking-input{
-    width: 200px;
-    color: #3e3e3a;
-    padding-left: 5px;
-    text-align: left;
-    height: 30px;
-    background-color: white;
-}*/
 
 .booking-input:hover, .cd-dropdown:hover{
     border-color: #8B4513;
     box-shadow: 0 1px 1px #8B4513 inset, 0 0 8px #8B4513;
     outline: 0 none;
 }
-
-/*.booking-label{
-    font-family: 'Great Vibes', cursive;
-    font-size: 20px;
-    text-align: right;
-    font-weight: lighter;
-}*/
-
-/*input::-webkit-input-placeholder {
-    text-align: left;
-}*/
 
 

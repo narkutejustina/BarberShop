@@ -67,7 +67,7 @@
 
             <c:forEach var="booking" items="${bookings}" varStatus="loop">
                 <tr>
-                    <th scope="row">${loop.index}</th>
+                    <th scope="row">${loop.index+1}</th>
                     <td>${booking.getKey().date}</td>
                     <td>${booking.getKey().time}</td>
                     <td>${booking.getValue().firstName}</td>
@@ -84,13 +84,11 @@
                                 data-title="Edit" data-toggle="modal"
                                 data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></td>
 
-
                     <td><button class="open-delete btn btn-danger btn-xs"
                                 data-id="${booking.getKey().bookingId}"
                                 data-title="Delete" data-toggle="modal"
                                 data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></td>
             </c:forEach>
-
             </tbody>
         </table>
         </div>

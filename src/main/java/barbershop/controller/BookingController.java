@@ -31,6 +31,9 @@ public class BookingController {
     public String bookings(ModelMap model) {
 
         model.addAttribute("bookings", bookingClientsService.getBookingClientsList());
+        model.addAttribute("barbers", barberService.findAll());
+        model.addAttribute("tasks", taskService.findAll());
+
         return "bookings";
     }
 

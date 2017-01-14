@@ -18,8 +18,8 @@
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
-
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
  <link href="resources/css/creative.css" rel="stylesheet">
     </head>
     <body ng-app="validationApp" ng-controller="mainController">
@@ -234,6 +234,5 @@
             allowTimes: availableTimes
         });
     }
-    
 </script>
 </html>
