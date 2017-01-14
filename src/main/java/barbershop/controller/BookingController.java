@@ -98,7 +98,7 @@ public class BookingController {
         bookingService.save(new Booking(Integer.parseInt(barberId),client.getClientId(),
                 Date.valueOf(date) , Time.valueOf(time+ ":00"), Integer.parseInt(taskId)));
 
-        return "test";
+        return "home";
     }
 
     @PostMapping("/deletebooking")
