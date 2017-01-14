@@ -75,16 +75,16 @@ public class BookingController {
     }
 
     @PostMapping("/deletebooking")
-    public String deleteBooking(ModelMap model, @RequestParam int id)
+    public String deleteBooking(ModelMap model, @RequestParam String bookingId) throws ParseException
     {
         try
         {
-            if (bookingService.findBooking(id) == null)
+            if (bookingService.findBooking(Integer.parseInt(bookingId)) == null)
             {
                 throw new ClassNotFoundException();
             } else
             {
-                bookingService.delete(id);
+                bookingService.delete(Integer.parseInt(bookingId));
             }
         } catch (ClassNotFoundException e){
             System.out.println("Caught "+ e);
