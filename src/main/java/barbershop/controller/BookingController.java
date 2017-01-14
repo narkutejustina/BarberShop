@@ -4,6 +4,8 @@ import barbershop.entity.Booking;
 import barbershop.entity.Client;
 import barbershop.entity.Task;
 import barbershop.service.*;
+import javassist.NotFoundException;
+import org.aspectj.weaver.ast.Not;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -73,11 +75,25 @@ public class BookingController {
     }
 
     @PostMapping("/deletebooking")
-    public String deleteBooking(@RequestParam int id)
+    public String deleteBooking(ModelMap model, @RequestParam int id)
     {
-        bookingService.delete(id);
+        try
+        {
+            if (bookingService.findBooking(id) == null)
+            {
+                throw new ClassNotFoundException();
+            } else
+            {
+                bookingService.delete(id);
+            }
+        } catch (ClassNotFoundException e){
+            System.out.println("Caught "+ e);
+            e.printStackTrace();
+        }
 
-        return "test";
+        model.addAttribute("bookings", bookingClientsService.getBookingClientsList());
+
+        return "bookings";
     }
 
 
@@ -91,11 +107,6 @@ public class BookingController {
         return "test";
     }
 
-//    @GetMapping("/delete-booking")
-//    public String deleteBooking(@RequestParam int id, ModelMap model, HttpServletRequest request){
-//        model.addAttribute("bookings", bookingClientsService.getBookingClientsList());
-//        return "bookings";
-//    }
 
 //    @RequestMapping("/bookings")
 //    public String bookings(ModelMap model) {

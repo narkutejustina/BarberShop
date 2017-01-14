@@ -13,11 +13,14 @@
 
     <link href="resources/css/background.css" rel="stylesheet">
     <link href="resources/css/booking/booking.css" rel="stylesheet">
+
+    <script src="resources/js/jquery.js"></script>
 </head>
 <body>
 
 <%@include file="header.jsp" %>
 
+<form class="main" method="post">
     <div class="container">
         <div class="well well-sm">
         <table class="table table-sm table-hover table-responsive bookingsTable" >
@@ -46,7 +49,11 @@
                         <a href="#"><span class="glyphicon glyphicon-pencil" style="color: navajowhite"></span></a>
                     </td>
                     <td>
-                        <a href="#"><span class="glyphicon glyphicon-trash" style="color: darkred"></span></a>
+                        <button type="submit" formaction="deletebooking" name="id"
+                                value="${booking.getKey().bookingId}">
+                            <span class="glyphicon glyphicon-trash" style="color: darkred"></span>
+                        </button>
+                        <%--<a href="#"><span class="glyphicon glyphicon-trash" style="color: darkred"></span></a>--%>
                     </td>
                 </tr>
             </c:forEach>
@@ -55,5 +62,6 @@
         </table>
         </div>
     </div>
+</form>
 </body>
 </html>
