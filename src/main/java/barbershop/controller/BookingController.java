@@ -39,6 +39,41 @@ public class BookingController {
         return "bookings";
     }
 
+    @PostMapping("/updatebooking")
+    public String updateBooking(ModelMap model, @RequestParam String bookingId,
+                                @RequestParam(value="booking-clientid") String clientId,
+                                @RequestParam(value="booking-date") String bookingDate,
+                                @RequestParam(value="booking-time") String bookingTime,
+                                @RequestParam(value="booking-firstname") String firstName,
+                                @RequestParam(value="booking-lastname") String lastName) throws ParseException
+    {
+        try{
+            if(bookingService.findBooking(Integer.parseInt(bookingId))==null ||
+                    clientService.getById(Integer.parseInt(clientId))==null)
+            {
+                throw new ClassNotFoundException();
+            }
+        }catch (ClassNotFoundException e){
+            System.out.println("Caught "+ e);
+            e.printStackTrace();}
+
+        Booking booking = bookingService.findBooking(Integer.parseInt(bookingId));
+        Client client = clientService.getById(Integer.parseInt(clientId));
+
+        booking.setDate(Date.valueOf(bookingDate));
+        booking.setTime(Time.valueOf(bookingTime));
+
+        client.setFirstName(firstName);
+        client.setLastName(lastName);
+
+        bookingService.save(booking);
+        clientService.save(client);
+
+
+        model.addAttribute("bookings", bookingClientsService.getBookingClientsList());
+        return "bookings";
+    }
+
     @PostMapping("/savebooking")
     public String saveBooking(@RequestParam(value="firstname") String firstName,
                               @RequestParam(value="lastname") String lastName,

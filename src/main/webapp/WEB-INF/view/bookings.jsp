@@ -19,10 +19,29 @@
     <%--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>--%>
     <%--<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>--%>
 <script>
+    $(document).on("click", ".open-edit", function () {
+        var date = $(this).data('date');
+        $(".modal-body #booking-date").val(date);
+
+        var time = $(this).data('time');
+        $(".modal-body #booking-time").val(time);
+
+        var firstname = $(this).data('firstname');
+        $(".modal-body #booking-firstname").val(firstname);
+
+        var lastname = $(this).data('lastname');
+        $(".modal-body #booking-lastname").val(lastname);
+
+        var clientId = $(this).data('clientid');
+        $(".modal-body #booking-clientid").val(clientId);
+
+        var bookingId = $(this).data('id');
+        $(".modal-footer #bookingId1").val(bookingId);
+    });
+
     $(document).on("click", ".open-delete", function () {
         var bookingId = $(this).data('id');
-        $(".modal-footer #bookingId").val(bookingId);
-        $('#delete').modal('show');
+        $(".modal-footer #bookingId2").val(bookingId);
     });
 </script>
 </head>
@@ -56,8 +75,13 @@
                     <td>${booking.getValue().lastName}</td>
 
 
-
-                    <td><button  class="btn btn-primary btn-xs" data-id="${booking.getKey().bookingId}"
+                    <td><button class="open-edit btn btn-primary btn-xs"
+                                data-id="${booking.getKey().bookingId}"
+                                data-date="${booking.getKey().date}"
+                                data-time="${booking.getKey().time}"
+                                data-firstname="${booking.getValue().firstName}"
+                                data-lastname="${booking.getValue().lastName}"
+                                data-clientid="${booking.getValue().clientId}"
                                 data-title="Edit" data-toggle="modal"
                                 data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></td>
 
@@ -95,20 +119,26 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <input class="form-control " type="text" value="">
+                        <label for="booking-date" class="control-label">Date:</label>
+                        <input type="text" class="form-control" id="booking-date" name="booking-date">
                     </div>
                     <div class="form-group">
-
-                        <input class="form-control " type="text" placeholder="Irshad">
+                        <label for="booking-time" class="control-label">Time:</label>
+                        <input type="text" class="form-control" id="booking-time" name="booking-time">
                     </div>
                     <div class="form-group">
-                        <textarea rows="2" class="form-control" placeholder="CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan"></textarea>
-
-
+                        <label for="booking-firstname" class="control-label">First name:</label>
+                        <input type="text" class="form-control" id="booking-firstname" name="booking-firstname">
                     </div>
+                    <div class="form-group">
+                        <label for="booking-lastname" class="control-label">Last name:</label>
+                        <input type="text" class="form-control" id="booking-lastname" name="booking-lastname">
+                    </div>
+                        <input type="hidden" id="booking-clientid" name="booking-clientid">
                 </div>
-                <div class="modal-footer ">
-                    <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span
+                <div class="modal-footer">
+                    <button type="submit" name="bookingId" id="bookingId1" formaction="updatebooking"
+                            class="btn btn-warning btn-lg" style="width: 100%;"><span
                             class="glyphicon glyphicon-ok-sign"></span> Update</button>
                 </div>
             </div>
@@ -116,7 +146,6 @@
         </div>
         <!-- /.modal-dialog -->
     </div>
-
 
     <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
         <div class="modal-dialog">
@@ -133,7 +162,7 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" name="bookingId" id="bookingId" formaction="deletebooking"
+                    <button type="submit" name="bookingId" id="bookingId2" formaction="deletebooking"
                             class="btn btn-success" ><span
                             class="glyphicon glyphicon-ok"></span> Yes
                     </button>
