@@ -17,7 +17,7 @@
         <link href="resources/css/font-awesome.css" rel="stylesheet">
         
         <!--Angular-->
-        <script src="http://code.angularjs.org/1.2.6/angular.js"></script> 
+        <script src="https://code.angularjs.org/1.4.0-rc.1/angular.js"></script>
         <script src="resources/js/app.js"></script>
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -35,36 +35,50 @@
                 <div class="well well-sm">
                     <section class="main">
                         <!--<form class="form-horizontal" method="post" action="/bookingInformation" >-->
-                        <form class="form-horizontal" ng-submit="submitForm(userForm.$valid)" novalidate action="/bookingInformation" >
+                        <form name="userForm" class="form-horizontal" ng-submit="submitForm(userForm.$valid)" novalidate action="/bookingInformation" >
                             <fieldset>
                                 <legend class="text-center contactHeader">BOOKING</legend>
-                                <div class="form-group">
+                                <div class="form-group" ng-class="{ 'has-error' : userForm.firstname.$invalid && !userForm.firstname.$pristine }">
                                     <div class="col-md-10 col-md-offset-1">
-                                        <!--<input id="firstname" name="firstname"  type="text" placeholder="First name" required pattern="[a-zA-Z]+" class="booking-input form-control input-sm">                            </div>-->
-                                        <input id="firstname" name="firstname" ng-model="firstname" ng-pattern="[a-zA-Z]+" type="text" placeholder="First name" required class="booking-input form-control input-sm">                            </div>
-<p ng-show="userForm.firstname.$touched && userForm.firstname.$invalid" class="help-block">Your name is required.</p>
+                                        <!--<input id="firstname" name="firstname"  type="text" placeholder="First name" required pattern="[a-zA-Z]+" class="booking-input form-control input-sm">                            -->
+                                        <input id="firstname" name="firstname" ng-model="firstname" ng-pattern="/^[a-zA-Z ]{2,30}$/" type="text" placeholder="First name" required class="booking-input form-control input-sm">                           
+                                        <div class="custom-error" ng-show="userForm.firstname.$dirty && userForm.firstname.$invalid">Invalid: 
+                                            <span ng-show="userForm.firstname.$error.required">First name is required.</span>
+                                            <span  ng-show="userForm.firstname.$error.pattern"> First name should contains only letters.</span>
+                                        </div>                                    
+                                    </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" ng-class="{ 'has-error' : userForm.lastname.$invalid && !userForm.lastname.$pristine }">
                                     <div class="col-md-10 col-md-offset-1">
                                         <!--<input id="lastname" name="lastname" type="text" placeholder="Last name" required pattern="[a-zA-Z]+" class="booking-input form-control input-sm">-->
-                                        <input id="lastname" name="lastname" ng-model="lastname" type="text" ng-pattern="[a-zA-Z]+" placeholder="Last name" required class="booking-input form-control input-sm">
-<p ng-show="userForm.lastname.$error.pattern" class="help-block">It should be only letters.</p>
+                                        <input id="lastname" name="lastname" ng-model="lastname" type="text" ng-pattern="/^[a-zA-Z ]{2,30}$/" placeholder="Last name" required class="booking-input form-control input-sm">
+                                        <div class="custom-error" ng-show="userForm.lastname.$dirty && userForm.lastname.$invalid">Invalid: 
+                                        <span ng-show="userForm.lastname.$error.required">Last name is required.</span>
+                                        <span ng-show="userForm.lastname.$error.pattern"> Last name should contains only letters and be longer than 1 symbol.</span>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group" ng-class="{ 'has-error' : userForm.emaill.$invalid && !userForm.email.$pristine }">
                                     <div class="col-md-10 col-md-offset-1">
-                                         <!--<input id="email" name="email" type="email" placeholder="Email" required class="booking-input  input-sm form-control">-->
+                                        <!--<input id="email" name="email" type="email" placeholder="Email" required class="booking-input  input-sm form-control">-->
                                         <input id="email" name="email" ng-model="email" type="email" placeholder="Email" required class="booking-input  input-sm form-control">
-                                    <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+                                        <div class="custom-error" ng-show="userForm.email.$dirty && userForm.email.$invalid">Invalid:
+                                            <span ng-show="userForm.email.$error.required">Email is required.</span>
+                                            <span ng-show="userForm.email.$error.email">Please, write a valid email address.</span>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group" ng-class="{ 'has-error' : userForm.phone.$invalid && !userForm.phone.$pristine }">
                                     <div class="col-md-10 col-md-offset-1">
-                                        <!--<input id="phone" name="phone" placeholder="Phone" pattern="\+370\d{8}$" required class="booking-input form-control input-sm">-->
-                                        <input id="phone" name="phone" ng-model="phone" placeholder="Phone" ng-pattern="\+370\d{8}$" required class="booking-input form-control input-sm">
-<p ng-show="userForm.phone.$error.pattern" class="help-block">It should be +370 x xxx xxxx.</p>
+                                        <!--<input id="phone" name="phone" placeholder="Phone" pattern="[0-9]{8}$" required class="booking-input form-control input-sm">-->
+                                        <input id="phone" name="phone" ng-model="phone" placeholder="Phone" type="text" ng-pattern="/\+3706([0-9]{7})$/" required class="booking-input form-control input-sm">
+                                        <div class="custom-error" ng-show="userForm.phone.$dirty && userForm.phone.$invalid">Invalid: 
+                                            <span ng-show="userForm.phone.$error.required">Phone number is required.</span>
+                                            <span ng-show="userForm.phone.$error.pattern"> Phone number format doesn`t match the format. It should be +370xxxxxxxx.</span>
+                                        </div>
+
                                     </div>
                                 </div>
 
@@ -101,7 +115,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-10 col-md-offset-1">
-                                        <input id="timepicker" name="timepicker" placeholder="Time"  class="booking-input form-control input-sm">
+                                        <input id="timepicker" name="timepicker" placeholder="Time" required  class="booking-input form-control input-sm">
                                     </div>
                                 </div>
 
