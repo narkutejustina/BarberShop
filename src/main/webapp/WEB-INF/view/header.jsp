@@ -17,7 +17,7 @@
                         <li><a href="prices">Prices</a></li>
                         <li><a href="staff">Staff</a></li>
                         <li><a href="contacts">Contacts</a></li>
-                        <li><a href="test">Online Booking</a></li>
+                        <li><a href="booking">Online Booking</a></li>
                         <c:if test="${!empty sessionScope.logged_user}">
                             <li><a href="bookings">Bookings</a></li>
                         </c:if>

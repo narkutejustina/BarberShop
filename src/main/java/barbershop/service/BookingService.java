@@ -1,9 +1,7 @@
 package barbershop.service;
 
 import barbershop.dao.BookingDao;
-import barbershop.dao.ClientDao;
 import barbershop.entity.Booking;
-import barbershop.entity.Client;
 import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -46,15 +44,15 @@ public class BookingService {
 
      public void delete(Booking booking){this.bookingDao.delete(booking);}
 
-//    public List<Pair<String,String>> getReformatedList(){
-//
-//        List<Pair<String,String>> reformatedBookings = new ArrayList<>();
-//
-//        for(Booking booking: bookingDao.findAll()) {
-//            reformatedBookings.add(new Pair(booking.getDate().toString() + " " + booking.getBarberId(),
-//                    booking.getTime().toString().substring(0,5)));
-//        }
-//        return reformatedBookings;
-//    }
+    public List<Pair<String,String>> getReformatedList(){
+
+        List<Pair<String,String>> reformatedBookings = new ArrayList<>();
+
+        for(Booking booking: bookingDao.findAll()) {
+            reformatedBookings.add(new Pair(booking.getDate().toString() + " " + booking.getBarberId(),
+                    booking.getTime().toString().substring(0,5)));
+        }
+        return reformatedBookings;
+    }
 
 }

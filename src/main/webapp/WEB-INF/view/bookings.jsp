@@ -16,8 +16,7 @@
 
     <script src="resources/js/jquery.js"></script>
     <script src="resources/js/bootstrap.min.js"></script>
-    <%--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>--%>
-    <%--<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>--%>
+
 <script>
     $(document).on("click", ".open-edit", function () {
         var date = $(this).data('date');
@@ -90,18 +89,6 @@
                                 data-id="${booking.getKey().bookingId}"
                                 data-title="Delete" data-toggle="modal"
                                 data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></td>
-
-                    <%--<td>--%>
-                        <%--<a href="#"><span class="glyphicon glyphicon-pencil" style="color: navajowhite"></span></a>--%>
-                    <%--</td>--%>
-                    <%--<td>--%>
-                        <%--<button type="submit" formaction="deletebooking" name="id"--%>
-                                <%--value="${booking.getKey().bookingId}">--%>
-                            <%--<span class="glyphicon glyphicon-trash" style="color: darkred"></span>--%>
-                        <%--</button>--%>
-                        <%--<a href="#"><span class="glyphicon glyphicon-trash" style="color: darkred"></span></a>--%>
-                    <%--</td>--%>
-                <%--</tr>--%>
             </c:forEach>
 
             </tbody>
