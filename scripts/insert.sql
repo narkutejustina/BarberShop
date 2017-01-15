@@ -9,5 +9,6 @@ INSERT INTO Task(title, duration, price) VALUES
   INSERT INTO Barber(FirstName,LastName) VALUES
   ('Kevin', 'White'),
   ('Matt', 'Jackson'),
+  ('Joe', 'Conductor'),
   ('Phil','Damon');
 
