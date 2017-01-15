@@ -43,11 +43,16 @@ public class BookingController {
                                 @RequestParam(value="booking-date") String bookingDate,
                                 @RequestParam(value="booking-time") String bookingTime,
                                 @RequestParam(value="booking-firstname") String firstName,
-                                @RequestParam(value="booking-lastname") String lastName) throws ParseException
+                                @RequestParam(value="booking-lastname") String lastName,
+                                @RequestParam(value="booking-barberid") String barberId,
+                                @RequestParam(value="booking-taskid") String taskId,
+                                @RequestParam(value="booking-price") String price) throws ParseException
     {
         try{
             if(bookingService.findBooking(Integer.parseInt(bookingId))==null ||
-                    clientService.getById(Integer.parseInt(clientId))==null)
+                    clientService.getById(Integer.parseInt(clientId))==null ||
+                    barberService.getById(Integer.parseInt(barberId))==null ||
+                    taskService.getById(Integer.parseInt(taskId))==null)
             {
                 throw new ClassNotFoundException();
             }
@@ -55,20 +60,32 @@ public class BookingController {
             System.out.println("Caught "+ e);
             e.printStackTrace();}
 
+
         Booking booking = bookingService.findBooking(Integer.parseInt(bookingId));
         Client client = clientService.getById(Integer.parseInt(clientId));
+        Task task = taskService.getById(Integer.parseInt(taskId));
 
         booking.setDate(Date.valueOf(bookingDate));
         booking.setTime(Time.valueOf(bookingTime));
+        booking.setBarberId(Integer.parseInt(barberId));
+        booking.setTaskId(Integer.parseInt(taskId));
+
+        task.setPrice(Integer.parseInt(price));
 
         client.setFirstName(firstName);
         client.setLastName(lastName);
 
+        //TODO: If there is no change in the entities (check if ID's are equal) don't save
+
         bookingService.save(booking);
         clientService.save(client);
+        taskService.save(task);
 
-
+        //Sends back the new data to bookings page
         model.addAttribute("bookings", bookingClientsService.getBookingClientsList());
+        model.addAttribute("barbers", barberService.findAll());
+        model.addAttribute("tasks", taskService.findAll());
+
         return "bookings";
     }
 
@@ -121,7 +138,10 @@ public class BookingController {
             e.printStackTrace();
         }
 
+        //Sends back the new data to bookings page
         model.addAttribute("bookings", bookingClientsService.getBookingClientsList());
+        model.addAttribute("barbers", barberService.findAll());
+        model.addAttribute("tasks", taskService.findAll());
 
         return "bookings";
     }

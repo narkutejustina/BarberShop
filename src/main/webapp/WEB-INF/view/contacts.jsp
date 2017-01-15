@@ -30,38 +30,38 @@
     <div class="row">
         <div class="col-md-6">
             <div class="well well-sm">
-                <form name="userForm" class="form-horizontal" ng-submit="submitForm(userForm.$valid)" novalidate class="form-horizontal" method="post">
+                <form name="userForm" class="form-horizontal" method="post" action="msg"
+                      ng-submit="submitForm(userForm.$valid)" novalidate
+                      class="form-horizontal">
                     <fieldset>
                         <legend class="text-center contactHeader">CONTACT US</legend>
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-1">
-                                <input id="fname" name="firstname" type="text" placeholder="First Name" class="form-control">
+                                <input id="fname" name="firstname" type="text" placeholder="First Name"
+                                       class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-1">
-                                <input id="lname" name="lastname" type="text" placeholder="Last Name" class="form-control">
+                                <input id="lname" name="lastname" type="text" placeholder="Last Name"
+                                       class="form-control">
                             </div>
                         </div>
-
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-1">
                                 <input id="email" name="email" type="text" placeholder="Email Address" class="form-control">
                             </div>
                         </div>
-
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-1">
                                 <input id="phone" name="phone" type="text" placeholder="Phone" class="form-control">
                             </div>
                         </div>
-
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-1">
                                 <textarea class="form-control" id="message" name="message" placeholder="Enter your massage for us here. We will get back to you within 2 business days." rows="7"></textarea>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <div class="col-md-12 text-center ">
                                 <button type="submit" class="btn btn-primary btn-xl">Submit</button>

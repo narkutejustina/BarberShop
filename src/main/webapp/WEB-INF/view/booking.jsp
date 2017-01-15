@@ -149,6 +149,7 @@
 <script src="resources/js/booking/modernizr.custom.63321.js"></script>
 <script type="text/javascript" src="resources/js/booking/jquery.dropdown.js"></script>
 
+<script src="resources/js/bootstrap.min.js"></script>
 <script src="resources/js/creative.min.js"></script>
 <script type="text/javascript">
 

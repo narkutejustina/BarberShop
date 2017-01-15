@@ -22,9 +22,4 @@ public class HomeController
     {
         return "gallery";
     }
-    @RequestMapping("/contacts")
-    public String contacts()
-    {
-        return "contacts";
-    }
 }
