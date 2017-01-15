@@ -60,6 +60,7 @@ public class BookingController {
             System.out.println("Caught "+ e);
             e.printStackTrace();}
 
+
         Booking booking = bookingService.findBooking(Integer.parseInt(bookingId));
         Client client = clientService.getById(Integer.parseInt(clientId));
         Task task = taskService.getById(Integer.parseInt(taskId));
@@ -74,11 +75,13 @@ public class BookingController {
         client.setFirstName(firstName);
         client.setLastName(lastName);
 
+        //TODO: If there is no change in the entities (check if ID's are equal) don't save
+
         bookingService.save(booking);
         clientService.save(client);
         taskService.save(task);
 
-
+        //Sends back the new data to bookings page
         model.addAttribute("bookings", bookingClientsService.getBookingClientsList());
         model.addAttribute("barbers", barberService.findAll());
         model.addAttribute("tasks", taskService.findAll());
