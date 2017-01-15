@@ -73,7 +73,7 @@
                                         <input id="phone" name="phone" ng-model="phone" placeholder="Phone" type="text" ng-pattern="/\+3706([0-9]{7})$/" required class="booking-input form-control input-sm">
                                         <div class="custom-error" ng-show="userForm.phone.$dirty && userForm.phone.$invalid">Invalid: 
                                             <span ng-show="userForm.phone.$error.required">Phone number is required.</span>
-                                            <span ng-show="userForm.phone.$error.pattern"> Phone number format doesn`t match the format. It should be +370xxxxxxxx.</span>
+                                            <span ng-show="userForm.phone.$error.pattern"> Phone number format doesn`t match the format. It should be +3706xxxxxxx.</span>
                                         </div>
 
                                     </div>
@@ -88,7 +88,8 @@
                                                 <option value="${task.taskId}" class="icon-camera">
                                                     ${task.title} ${task.price} &euro;</option>
                                                 </c:forEach>
-                                        </select>                            </div>
+                                        </select>                            
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-10 col-md-offset-1">
