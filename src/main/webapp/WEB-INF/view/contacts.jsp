@@ -35,12 +35,12 @@
                         <legend class="text-center contactHeader">CONTACT US</legend>
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-1">
-                                <input id="fname" name="name" type="text" placeholder="First Name" class="form-control">
+                                <input id="fname" name="firstname" type="text" placeholder="First Name" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-1">
-                                <input id="lname" name="name" type="text" placeholder="Last Name" class="form-control">
+                                <input id="lname" name="lastname" type="text" placeholder="Last Name" class="form-control">
                             </div>
                         </div>
 
