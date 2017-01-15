@@ -35,6 +35,13 @@
                       class="form-horizontal">
                     <fieldset>
                         <legend class="text-center contactHeader">CONTACT US</legend>
+                        <c:if test="${sent == 'yes'}">
+                            <div class="form-group">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <b style="color: red"> Your message was sent successfully! </b>
+                                </div>
+                            </div>
+                        </c:if>
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-1">
                                 <input id="fname" name="firstname" type="text" placeholder="First Name"

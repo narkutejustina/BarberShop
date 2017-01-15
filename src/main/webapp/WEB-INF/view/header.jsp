@@ -22,6 +22,9 @@
                             <li><a href="bookings">Bookings</a></li>
                         </c:if>
                         <c:if test="${!empty sessionScope.logged_user}">
+                            <li><a href="messages">Messages</a></li>
+                        </c:if>
+                        <c:if test="${!empty sessionScope.logged_user}">
                             <li><a href="logout">Logout</a></li>
                         </c:if>
                         <c:if test="${empty sessionScope.logged_user}">

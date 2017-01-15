@@ -31,6 +31,15 @@ public class ClientService {
         return clients;
     }
 
+    public List<Client> findAllWithComments() {
+        List<Client> clients = new ArrayList<>();
+        for(Client client: dao.findAll()) {
+            if(client.getComment() != null && client.getComment() != "")
+                clients.add(client);
+        }
+        return clients;
+    }
+
     public Client getById(int id) {
         return dao.findOne(id);
     }
