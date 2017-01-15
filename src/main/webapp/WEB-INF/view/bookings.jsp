@@ -13,6 +13,8 @@
 
     <link href="resources/css/background.css" rel="stylesheet">
     <link href="resources/css/booking/booking.css" rel="stylesheet">
+    <link href="resources/css/creative.css" rel="stylesheet">
+    <%--CSS for dropdown selector--%>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css">
 
     <script src="resources/js/jquery.js"></script>
@@ -75,7 +77,6 @@
                 <th>Price</th>
                 <th>Edit</th>
                 <th>Delete</th>
-
             </tr>
             </thead>
             <tbody>
@@ -215,5 +216,7 @@
         <!-- /.modal-dialog -->
     </div>
 </form>
+
+<script src="resources/js/creative.min.js"></script>
 </body>
 </html>
