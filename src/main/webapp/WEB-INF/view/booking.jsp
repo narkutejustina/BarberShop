@@ -178,7 +178,7 @@
             format: 'Y-m-d',
             minDate: Date.now() + 1,
             value: Date.now(),
-            dayWeekStart: 1,
+            dayOfWeekStart: 1,
             disabledWeekDays: [0,6],
             onChangeDateTime:function(dp,$input){
                 selectedDate = $input.val();
