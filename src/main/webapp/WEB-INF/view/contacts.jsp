@@ -30,22 +30,20 @@
     <div class="row">
         <div class="col-md-6">
             <div class="well well-sm">
-                <form name="messageForm" class="form-horizontal" method="post" action="sendMessage"
+                <form name="userForm" class="form-horizontal" method="post" action="msg"
+                      ng-submit="submitForm(userForm.$valid)" novalidate
                       class="form-horizontal">
                     <fieldset>
                         <legend class="text-center contactHeader">CONTACT US</legend>
-                        <c:if test="${send == 'yes'}">
-                            Message sent!
-                        </c:if>
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-1">
-                                <input id="firstname" name="firstname" type="text" placeholder="First Name"
+                                <input id="fname" name="firstname" type="text" placeholder="First Name"
                                        class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-1">
-                                <input id="lastname" name="lastname" type="text" placeholder="Last Name"
+                                <input id="lname" name="lastname" type="text" placeholder="Last Name"
                                        class="form-control">
                             </div>
                         </div>
@@ -61,7 +59,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-1">
-                                <textarea class="form-control" id="text" name="text" placeholder="Enter your massage for us here. We will get back to you within 2 business days." rows="7"></textarea>
+                                <textarea class="form-control" id="message" name="message" placeholder="Enter your massage for us here. We will get back to you within 2 business days." rows="7"></textarea>
                             </div>
                         </div>
                         <div class="form-group">
