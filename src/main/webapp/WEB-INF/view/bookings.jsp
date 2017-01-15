@@ -13,9 +13,11 @@
 
     <link href="resources/css/background.css" rel="stylesheet">
     <link href="resources/css/booking/booking.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css">
 
     <script src="resources/js/jquery.js"></script>
     <script src="resources/js/bootstrap.min.js"></script>
+    <script src="resources/js/bootstrap-select.js"></script>
 
 <script>
     $(document).on("click", ".open-edit", function () {
@@ -31,12 +33,22 @@
         var lastname = $(this).data('lastname');
         $(".modal-body #booking-lastname").val(lastname);
 
+        var barberid = $(this).data('barberid');
+        $('#booking-barberid').selectpicker('val', barberid);
+
+        var taskid = $(this).data('taskid');
+        $('#booking-taskid').selectpicker('val', taskid);
+
+        var price = $(this).data('price');
+        $(".modal-body #booking-price").val(price);
+
         var clientId = $(this).data('clientid');
         $(".modal-body #booking-clientid").val(clientId);
 
         var bookingId = $(this).data('id');
         $(".modal-footer #bookingId1").val(bookingId);
     });
+
 
     $(document).on("click", ".open-delete", function () {
         var bookingId = $(this).data('id');
@@ -98,6 +110,13 @@
                                 data-firstname="${booking.getValue().firstName}"
                                 data-lastname="${booking.getValue().lastName}"
                                 data-clientid="${booking.getValue().clientId}"
+                                data-barberid="${booking.getKey().barberId}"
+                                data-taskid="${booking.getKey().taskId}"
+                                <c:forEach var="task" items="${tasks}">
+                                    <c:if test="${booking.getKey().taskId == task.taskId}">
+                                        data-price="${task.price}"
+                                    </c:if>
+                                </c:forEach>
                                 data-title="Edit" data-toggle="modal"
                                 data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></td>
 
@@ -136,7 +155,26 @@
                         <label for="booking-lastname" class="control-label">Last name:</label>
                         <input type="text" class="form-control" id="booking-lastname" name="booking-lastname">
                     </div>
-                        <input type="hidden" id="booking-clientid" name="booking-clientid">
+                    <div class="form-group">
+                        <label class="control-label">Barber:</label>
+                        <select class="selectpicker show-tick" id="booking-barberid" name="booking-barberid">
+                            <c:forEach var="barber" items="${barbers}">
+                                <option value="${barber.barberId}">${barber.firstName}</option>
+                            </c:forEach>
+                        </select>
+                        <label class="control-label">Service:</label>
+                        <select class="selectpicker show-tick" id="booking-taskid" name="booking-taskid">
+                            <c:forEach var="task" items="${tasks}">
+                                    <option value="${task.taskId}">${task.title}</option>
+                            </c:forEach>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-price" class="control-label">Price:</label>
+                        <input type="text" class="form-control" id="booking-price" name="booking-price">
+                    </div>
+
+                    <input type="hidden" id="booking-clientid" name="booking-clientid">
                 </div>
                 <div class="modal-footer">
                     <button type="submit" name="bookingId" id="bookingId1" formaction="updatebooking"
