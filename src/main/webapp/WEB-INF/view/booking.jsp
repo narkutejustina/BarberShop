@@ -29,19 +29,19 @@
             <div class="col-md-6">
                 <div class="well well-sm">
                     <section class="main">
-                        <!--<form class="form-horizontal" method="post" action="/bookingInformation" >-->
                         <form name="userForm" class="form-horizontal"
                               method="post" ng-submit="submitForm(userForm.$valid)"
                               novalidate action="/bookingInformation" >
                             <fieldset>
                                 <legend class="text-center contactHeader">BOOKING</legend>
+
                                 <div class="form-group" ng-class="{ 'has-error' : userForm.firstname.$invalid && !userForm.firstname.$pristine }">
                                     <div class="col-md-10 col-md-offset-1">
                                         <!--<input id="firstname" name="firstname"  type="text" placeholder="First name" required pattern="[a-zA-Z]+" class="booking-input form-control input-sm">                            -->
                                         <input id="firstname" name="firstname" ng-model="firstname" ng-pattern="/^[a-zA-Z ]{2,30}$/" type="text" placeholder="First name" required class="booking-input form-control input-sm">                           
                                         <div class="custom-error" ng-show="userForm.firstname.$dirty && userForm.firstname.$invalid">Invalid: 
                                             <span ng-show="userForm.firstname.$error.required">First name is required.</span>
-                                            <span  ng-show="userForm.firstname.$error.pattern"> First name should contains only letters.</span>
+                                            <span ng-show="userForm.firstname.$error.pattern"> First name should contain only letters.</span>
                                         </div>                                    
                                     </div>
                                 </div>
@@ -50,8 +50,8 @@
                                         <!--<input id="lastname" name="lastname" type="text" placeholder="Last name" required pattern="[a-zA-Z]+" class="booking-input form-control input-sm">-->
                                         <input id="lastname" name="lastname" ng-model="lastname" type="text" ng-pattern="/^[a-zA-Z ]{2,30}$/" placeholder="Last name" required class="booking-input form-control input-sm">
                                         <div class="custom-error" ng-show="userForm.lastname.$dirty && userForm.lastname.$invalid">Invalid: 
-                                        <span ng-show="userForm.lastname.$error.required">Last name is required.</span>
-                                        <span ng-show="userForm.lastname.$error.pattern"> Last name should contains only letters and be longer than 1 symbol.</span>
+                                            <span ng-show="userForm.lastname.$error.required">Last name is required.</span>
+                                            <span ng-show="userForm.lastname.$error.pattern"> Last name should contains only letters and be longer than 1 symbol.</span>
                                         </div>
                                     </div>
                                 </div>
@@ -91,6 +91,7 @@
                                         </select>                            
                                     </div>
                                 </div>
+
                                 <div class="form-group">
                                     <div class="col-md-10 col-md-offset-1">
                                         <!--<input placeholder="Date" class="textbox-n" type="text" onfocus="(this.type='datepicker')" class="booking-input form-control input-sm" id="datepicker" onchange="selected()">-->
@@ -106,8 +107,7 @@
                                             <c:forEach var="barber" items="${barbers}">
                                                 <option value="${barber.barberId}" class="icon-camera">
                                                     ${barber.firstName} ${barber.lastName}</option>
-                                                </c:forEach>
-                                                
+                                            </c:forEach>
                                         </select>                            
                                     </div>
                                 </div>
@@ -158,6 +158,7 @@
     var selectedDate;
 
     var timePicker = $('#timepicker').datetimepicker();
+
     $(function () {
         timePicker.prop('disabled', true);
         $('#timepicker').keydown(function() {
@@ -175,7 +176,6 @@
         $('#datepicker').datetimepicker({
             timepicker: false,
             format: 'Y-m-d',
-//            mask: 'Y-m-d'
             minDate: Date.now() + 1,
             value: Date.now(),
             dayWeekStart: 1,
@@ -184,6 +184,7 @@
                 selectedDate = $input.val();
             }
         });
+
         $( '#cd-dropdown' ).dropdown( {
             gutter : 5,
             stack : false,
@@ -228,7 +229,7 @@
        $.map(options ,function(option) {
            var bookingTime = option.text;
            if(option.value == (chosenDate + " " + barberId)){
-               availableTimes = remove(times, bookingTime);
+               availableTimes = remove(availableTimes, bookingTime);
            }
         });
 
