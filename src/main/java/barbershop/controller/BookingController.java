@@ -138,7 +138,10 @@ public class BookingController {
             e.printStackTrace();
         }
 
+        //Sends back the new data to bookings page
         model.addAttribute("bookings", bookingClientsService.getBookingClientsList());
+        model.addAttribute("barbers", barberService.findAll());
+        model.addAttribute("tasks", taskService.findAll());
 
         return "bookings";
     }
