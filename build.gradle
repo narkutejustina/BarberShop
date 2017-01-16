@@ -37,8 +37,6 @@ dependencies {
     compile 'javax.servlet:jstl:1.2'
     compile 'mysql:mysql-connector-java:5.1.16'
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
-    compile 'net.sourgeforge.htmlunit:htmlunit:2.24'
-    compile 'org.dbunit:dbunit:2.5.4-SNAPSHOT'
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile("org.junit.jupiter:junit-jupiter-api:5.0.0-M3")
     testRuntime("org.junit.jupiter:junit-jupiter-engine:5.0.0-M3")

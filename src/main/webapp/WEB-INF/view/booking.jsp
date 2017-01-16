@@ -176,7 +176,7 @@
         $('#datepicker').datetimepicker({
             timepicker: false,
             format: 'Y-m-d',
-            minDate: Date.now() + 1,
+            minDate: initDate(),
             value: Date.now(),
             dayOfWeekStart: 1,
             disabledWeekDays: [0,6],
@@ -193,6 +193,9 @@
         } );
     });
 
+    function initDate(){
+        return Date.now();
+    }
     function selected(){
         var date = selectedDate;
         var barberId = $('#barbersDropDown').val();
