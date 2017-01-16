@@ -2,7 +2,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,7 +68,7 @@
     </div>
 
         <div class="carousel-caption homeHeading">
-                <h1>Welcome to Barbershop</h1>
+                <h1>Welcome to SPM</h1>
                 <hr>
                 <p>
                     The Barbershop offers an experience to remember for those seeking a unique and sophisticated outing
