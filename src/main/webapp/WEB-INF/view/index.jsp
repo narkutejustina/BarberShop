@@ -68,7 +68,7 @@
     </div>
 
         <div class="carousel-caption homeHeading">
-                <h1>Welcome to SPM</h1>
+                <h1>Welcome to Barbershop</h1>
                 <hr>
                 <p>
                     The Barbershop offers an experience to remember for those seeking a unique and sophisticated outing
